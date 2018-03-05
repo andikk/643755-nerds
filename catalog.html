@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+  </head>
+  <body>
+   <!-- 
+      Пока у нас нет готовых для вставки изображений, можешь использовать адреса "заглушки". Это было сказано в задании.
+      Например: <img src="http://placehold.it/150x100"> вставит изображение 150х100px, можешь попробовать, это довольно удобно и наглядно.
+   -->
+	<header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="http://placehold.it/150x100" width="" height="" alt="Логотип студии «Нёрдс»">
+        </a>
+		<ul class="site-navigation">
+          <li><a href="about.html">Студия</a></li>
+		  <li><a href="clients.html">Клиенты</a></li>
+		  <li class="site-navigation-current"><a href="shop.html">Магазин</a></li>
+		  <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+<!--   этот блок пока что можно разметить обычной ссылкой: a.cart > Корзина   -->
+		<a class="cart" href="#" >Корзина</a>
+      </nav> 
+      <h1>Магазин готовых шаблонов</h1>
+	</header>
+	
+    <main class="container">
+	  <section class="template-filter">
+          <h2 class="visually-hidden">Фильтр шаблонов</h2>
+          <!-- Здесь будет форма -->
+      </section>
+	
+	  <section class="templates">
+	    <ul class="templates-list">
+			<li class="selected-item>
+			  <img src="#" width="" height="" alt="">
+			  <p class="item-title">SEDONA</p>
+              <p class="item-description">Информационный сайт для туристов</b>
+              <a class="button" href="#">9 900 руб</a>
+            </p>
+			</li>
+			<li>
+			  <img src="#" width="" height="" alt="">
+			</li>
+			<li>
+			  <img src="#" width="" height="" alt="">
+			</li>
+			<li>
+			  <img src="#" width="" height="" alt="">
+			</li>
+			<li>
+			  <img src="#" width="" height="" alt="">
+			</li>
+			<li>
+			  <img src="#" width="" height="" alt="">
+			</li>
+		</ul>
+	  </section>
+	  
+	  <ul class="pagination-list">
+          <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+          <li class="pagination-item"><a>2</a></li>
+          <li class="pagination-item"><a href="#">3</a></li>
+          <li class="pagination-item"><a href="#">Следующая</a></li>
+        </ul>
+      </section>
+	
+	</main>
+  
+	<footer class="main-footer">
+    <!-- можешь использовать section вместо div -->
+	  <section class="footer-map">
+	    <div class="contacts">
+		  <p class="text-uppercase">NЁRDS DESIGN STUDIO</p>
+        <!-- можно использовать тег <address>  вместо p-->
+		  <address>191186, Санкт-Петербург, <br>
+             ул. Б. Конюшенная, д. 19/8<br><br>
+			 тел. +7 (812) 275-75-75</address>
+		    <a class="write-button" href="#">Напишите нам</a>
+		</div>
+	  </section>
+    <!-- можешь использовать section вместо div -->
+	  <section class="footer-social">
+	    <ul>
+          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+        </ul>
+		<p class="social-text"><b>Давайте дружить, это выгодно!</b><br>
+		Скидка 10% для друзей из социальных сетей.</p>
+	  </section>
+	</footer>
+	
+	<section class="modal-write-us">
+	  <h2>Напишите нам</h2>
+	  <!-- Здесь будет форма -->
+      <span class="modal-close">x</span>
+	</section>
+	
+  </body>
+</html>

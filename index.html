@@ -5,10 +5,14 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
+   <!-- 
+      Пока у нас нет готовых для вставки изображений, можешь использовать адреса "заглушки". Это было сказано в задании.
+      Например: <img src="http://placehold.it/150x100"> вставит изображение 150х100px, можешь попробовать, это довольно удобно и наглядно.
+   -->
 	<header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo">
-          <img src="img/index-logo.svg" width="" height="" alt="Логотип студии «Нёрдс»">
+          <img src="http://placehold.it/150x100" width="" height="" alt="Логотип студии «Нёрдс»">
         </a>
 		<ul class="site-navigation">
           <li><a href="about.html">Студия</a></li>
@@ -16,9 +20,8 @@
 		  <li><a href="shop.html">Магазин</a></li>
 		  <li><a href="contacts.html">Контакты</a></li>
         </ul>
-		<ul class="cart">
-          <li class="cart-link">Корзина</li>
-        </ul>
+<!--   этот блок пока что можно разметить обычной ссылкой: a.cart > Корзина   -->
+	    <a class="cart" href="#" >Корзина</a>
       </nav> 
     </header>
 	
@@ -26,10 +29,10 @@
       <h1 class="visually-hidden">Студия «Нёрдс»</h1>
 	  <section class="slider">
         <p class="slider-header">Долго, дорого, скурпулезно.</p>
-		<p class="slider-text"> Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+		<p class="slider-text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
         <a class="slider-button" href="learnmore.html">Узнать больше</a>
-		<img  src="img/slider1.svg" width="" height="" alt="Долго, дорого, скурпулезно." >	
-      </section>
+<!--    Это изображение больше необходимо для стилизациии и будет задано фоном через css, поэтому из html разметки его лучше убрать    -->
+	  </section>
 	  
 	  <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
@@ -53,31 +56,39 @@
 	  </section>
       
 	  <section class="studio">
-		<section class="studio-left">
-		<p class="studio-heading">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-		<p>Исповедуем принципы минимализма и чистоты. Ставим математически</p>
-		<p class="text-uppercase">Выполняем заказы на разработку: </p>   
+		<article class="studio-left"> <!-- можно использовать article, вполне себе самостоятельный раздел -->
+<!--   Вот здесь можно изпользовать тег b вместо p, поскольку текст визуально выделен    -->
+		<b class="studio-heading">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
+<!--    Недописан текст    -->
+		<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+<!--   Это заголовок, используй h3     -->
+		<h3>Выполняем заказы на разработку: </h3>   
 		<ul class="studio-service-list">
 		  <li>Веб-сайтов любой сложности</li>
 		  <li>Мобильных приложение для iOS и Android</li>
 		  <li>Слайдшоу и видео для корпоративных презентаций</li>
 		</ul>
-	  </section>
-	  <section class="studio-right">
-	    <img src="img/nerds-illustration.jpg" width="" height="" alt="Логотип студии «Нёрдс»">
-	    <p class="text-uppercase">с 2004 года Любим точность во всем:</p>
+	  </article>
+	  <aside class="studio-right"> <!-- можно использовать aside, поскольку это больше раздел с доп.информацией -->
+      <!--   это изображение большой смысловой нагрузки не несет и больше необходимо для стилизации, лучше убрать из html    -->
+	    <h3>с 2004 года Любим точность во всем:</h3>
 		<table class="studio-table">
-		  <th>
-		    <td>146%</td>
-			<td>100%</td>
-			<td>50%</td>
-		  </th>
+ <!--   
+  Если и оформлять это в виде таблице, то нужно в таком виде
+  table>tr>th + tr>td.
+-->
+		  <tr> <!-- т.е. здесь должно быть tr -->
+		    <th>146%</th> <!-- т.е. здесь должно быть th -->
+			<th>100%</th>
+			<th>50%</th>
+		  </tr>
 		  <tr>
 		    <td>Уровень самоотдачи</td>
 		    <td>Соблюдение сроков</td>
 			<td>Минимальная предоплата</td>
 		  </tr>
 		</table>
+     </aside>
 	  </section>
 	  <section class="portfolio">
 	    <a class="portfolio-logo">
@@ -93,19 +104,22 @@
           <img src="img/logo-4.png" width="" height="" alt="Логотип MISHKA">
         </a>
 	  </section>
-	  </section>
 	</main>
+  
 	<footer class="main-footer">
-	  <div class="footer-map">
+    <!-- можешь использовать section вместо div -->
+	  <section class="footer-map">
 	    <div class="contacts">
 		  <p class="text-uppercase">NЁRDS DESIGN STUDIO</p>
-		  <p>191186, Санкт-Петербург, <br>
+        <!-- можно использовать тег <address>  вместо p-->
+		  <address>191186, Санкт-Петербург, <br>
              ул. Б. Конюшенная, д. 19/8<br><br>
-			 тел. +7 (812) 275-75-75</p>
+			 тел. +7 (812) 275-75-75</address>
 		    <a class="write-button" href="#">Напишите нам</a>
 		</div>
-	  </div>
-	  <div class="footer-social">
+	  </section>
+    <!-- можешь использовать section вместо div -->
+	  <section class="footer-social">
 	    <ul>
           <li><a class="social-button" href="#">Вконтакте</a></li>
           <li><a class="social-button" href="#">Фейсбук</a></li>
@@ -113,7 +127,14 @@
         </ul>
 		<p class="social-text"><b>Давайте дружить, это выгодно!</b><br>
 		Скидка 10% для друзей из социальных сетей.</p>
-	  </div>
+	  </section>
 	</footer>
+	
+	<section class="modal-write-us">
+	  <h2>Напишите нам</h2>
+	  <!-- Здесь будет форма -->
+      <span class="modal-close">x</span>
+	</section>
+	
   </body>
 </html>
