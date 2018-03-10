@@ -73,12 +73,7 @@
 	  </article>
 	  <aside class="studio-right"> 
         <table class="studio-table">
-          <!-- h3 заменил на caption, поскольльку этот текст более ли менее описывает содержание таблицы -->
           <caption class="text-uppercase">с 2004 года Любим точность во всем:</caption>
-          <!-- th заменил на td поскольку, th необходим именно для заголовка столбца, 
-          т.е должен описывать информацию которая соделжится в этом столбце.
-          В данном случае, посмотрев на первую строку таблицы, мы не сможем понять для чего именно
-          нужен этот столбец -->
           <tr> 
             <td>146%</td> 
             <td>100%</td>
@@ -94,8 +89,7 @@
     </section>
 	 <section class="portfolio">
       <h2 class="visually-hidden">Партнеры</h2>
-      <!-- Обернул логотипы в список, поскольку это однотипные данные -->
-      <ul>
+        <ul>
         <li>
           <a class="portfolio-logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-1.png" width="260" height="180" alt="Логотип HTML Academy">
@@ -125,19 +119,15 @@
     <section class="footer-map">
       <h3 class="visually-hidden">Адрес</h3>
       <div class="contacts">
-        <!-- Здесь текст в веррхнем регистре заменил на нижний, поскольку верхний регистр лучше всегда
-          делать именно через css. Ну и p заменил на b -->
         <b class="text-uppercase">Nerds design studio</b>
         <address>
-          <!-- Никогда не используй два тега br, все доп. отступы делаються силами css -->
-          <p>
+            <p>
             191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8
           </p>
           <p>тел. +7 (812) 275-75-75</p>
         </address>
         <a class="write-button" href="#">Напишите нам</a>
-        <!-- Карту вставил тоже изображением поскольку она несет полезную информацию для пользователя -->
         <img src="img/map.jpg" width="1440" height="416" alt="Мы на карте">
       </div>
     </section>
@@ -155,8 +145,25 @@
 
   <section class="modal-write-us">
     <h2>Напишите нам</h2>
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
+    <button class="btn-close" type="button" aria-label="Закрыть форму для отправления письма"><span class="visually-hidden">Закрыть</span></button>
+	<form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+	    <label for="user-name">Ваше имя:</label>
+        <input type="text" name="user-name" id="user-name" autofocus placeholder="Имя Фамилия" required>
+      </p>
+	  
+	  <p>
+	    <label for="e-mail">Ваш e-mail:</label>
+        <input type="e-mail" name="e-mail" id="e-mail" placeholder="email@example.com" required>
+      </p>
+      
+	  <p>
+	    <label for="message">Текст письма:</label>
+        <textarea name="message" id="message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
+      </p>
+	  
+      <input type="submit" name="submit" value="Отправить">
+    </form>
   </section>
 </body>
 </html>

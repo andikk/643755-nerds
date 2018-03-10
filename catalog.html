@@ -7,8 +7,7 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation">
-      <!-- На странице каталога логотип должен вести на главную страницу -->
-      <a class="main-header-logo" href="index.html">
+       <a class="main-header-logo" href="index.html">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»">
       </a>
       <ul class="site-navigation">
@@ -25,15 +24,45 @@
     <h1>Магазин готовых шаблонов</h1>
     <aside class="template-filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
-      <!-- Здесь будет форма -->
-    </adide>
-    <section class="templates">
+      <form methot="get" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend><h2>Стоимость:</h2></legend>
+          <input type="range" min="0" max="15000" step="1" value="0">
+        </fieldset>
+	  
+	    <fieldset>
+          <legend><h2>Сетка:</h2></legend>
+          <label><input type="radio" name="check-layout" value="adaptive" checked>Адаптивная</label>
+          <label><input type="radio" name="check-layout" value="fixed">Фиксированная</label>
+          <label><input type="radio" name="check-layout" value="elastic">Резиновая</label>
+        </fieldset>
+	    
+		<fieldset>
+          <legend><h2>Особенности:</h2></legend>
+          <label><input type="checkbox" name="slider" checked>Слайдер</label>
+          <label><input type="checkbox" name="features">Блок преимуществ</label>
+          <label><input type="checkbox" name="news" checked>Новости</label>
+          <label><input type="checkbox" name="gallery">Галерея</label>
+          <label><input type="checkbox" name="cart">Корзина</label>
+        </fieldset>
+
+        <button>Показать</button>
+    </form>
+	</aside>
+    
+	<section class="templates">
+	  <div class="sort">
+	    <h2>Сортировать</h2>
+        <a class="sort-link" href="#">По цене</a>
+        <a class="sort-link" href="#">По типу</a>
+        <a class="sort-link" href="#">По названию</a>
+        <a class="btn-down" href="#">По убыванию</a>
+        <a class="btn-up" href="#">По возрастанию</a>
+      </div>
+	  
       <h2 class="visually-hidden">Каталог</h2>
-      <!-- В каталог добавил остальное описание товаров т.к. они должны быть в разметке
-       ,а их появление или скрытие будет делать силами css -->
       <ul class="templates-list">
         <li class="selected-item">
-          <!-- Не забывай заполнять атрибут alt -->
           <img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona">
           <h3 class="item-title text-uppercase">Sedona</h3>
           <p class="item-description">Информационный сайт для туристов</p>
@@ -71,7 +100,6 @@
         </li>
       </ul>
     </section>
-    <!-- Т.к это навигация по страницам следовательно ссылки можно обернуть в тег nav -->
     <nav>
       <ul class="pagination-list">
         <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
@@ -87,19 +115,15 @@
     <section class="footer-map">
       <h3 class="visually-hidden">Адрес</h3>
       <div class="contacts">
-        <!-- Здесь текст в веррхнем регистре заменил на нижний, поскольку верхний регистр лучше всегда
-          делать именно через css. Ну и p заменил на b -->
         <b class="text-uppercase">Nerds design studio</b>
         <address>
-          <!-- Никогда не используй два тега br, все доп. отступы делаються силами css -->
-          <p>
+           <p>
             191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8
           </p>
           <p>тел. +7 (812) 275-75-75</p>
         </address>
         <a class="write-button" href="#">Напишите нам</a>
-        <!-- Карту вставил тоже изображением поскольку она несет полезную информацию для пользователя -->
         <img src="img/map.jpg" width="1440" height="416" alt="Мы на карте">
       </div>
     </section>
@@ -117,8 +141,25 @@
 
   <section class="modal-write-us">
     <h2>Напишите нам</h2>
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
+    <button class="btn-close" type="button" aria-label="Закрыть форму для отправления письма"><span class="visually-hidden">Закрыть</span></button>
+	<form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+	    <label for="user-name">Ваше имя:</label>
+        <input type="text" name="user-name" id="user-name" autofocus placeholder="Имя Фамилия" required>
+      </p>
+	  
+	  <p>
+	    <label for="e-mail">Ваш e-mail:</label>
+        <input type="e-mail" name="e-mail" id="e-mail" placeholder="email@example.com" required>
+      </p>
+      
+	  <p>
+	    <label for="message">Текст письма:</label>
+        <textarea name="message" id="message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
+      </p>
+	  
+      <input type="submit" name="submit" value="Отправить">
+    </form>
   </section>
 </body>
 </html>
