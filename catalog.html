@@ -27,26 +27,33 @@
       <form methot="get" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend><h2>Стоимость:</h2></legend>
-          <input type="range" min="0" max="15000" step="1" value="0">
+          <label>Минимальная цена<input type="range" name="range-min-price" min="0" max="14000" step="1" value="0"></label> 
+		  <label>Максимальная цена<input type="range" name="range-max-price" min="1000" max="15000" step="1" value="15000"></label>
+		  <label>От:<input type="number" name="min-price value="0"></label> 
+		  <label>До:<input type="number"name="max-price value="15000"></label>
         </fieldset>
 	  
 	    <fieldset>
           <legend><h2>Сетка:</h2></legend>
-          <label><input type="radio" name="check-layout" value="adaptive" checked>Адаптивная</label>
-          <label><input type="radio" name="check-layout" value="fixed">Фиксированная</label>
-          <label><input type="radio" name="check-layout" value="elastic">Резиновая</label>
+          <ul>
+		    <li><label><input type="radio" class="visually-hidden" name="check-layout" value="adaptive" checked>Адаптивная</label></li>
+            <li><label><input type="radio" class="visually-hidden" name="check-layout" value="fixed">Фиксированная</label></li>
+            <li><label><input type="radio" class="visually-hidden" name="check-layout" value="elastic">Резиновая</label></li>
+		  </ul>
         </fieldset>
 	    
 		<fieldset>
           <legend><h2>Особенности:</h2></legend>
-          <label><input type="checkbox" name="slider" checked>Слайдер</label>
-          <label><input type="checkbox" name="features">Блок преимуществ</label>
-          <label><input type="checkbox" name="news" checked>Новости</label>
-          <label><input type="checkbox" name="gallery">Галерея</label>
-          <label><input type="checkbox" name="cart">Корзина</label>
+          <ul>
+		    <li><label><input type="checkbox" class="visually-hidden" name="slider" checked>Слайдер</label></li>
+            <li><label><input type="checkbox" class="visually-hidden" name="features">Блок преимуществ</label></li>
+            <li><label><input type="checkbox" class="visually-hidden" name="news" checked>Новости</label></li>
+            <li><label><input type="checkbox" class="visually-hidden" name="gallery">Галерея</label></li>
+            <li><label><input type="checkbox" class="visually-hidden" name="cart">Корзина</label></li>
+		  </ul>
         </fieldset>
 
-        <button>Показать</button>
+        <button id="btn-show" >Показать</button>
     </form>
 	</aside>
     
@@ -142,7 +149,7 @@
   <section class="modal-write-us">
     <h2>Напишите нам</h2>
     <button class="btn-close" type="button" aria-label="Закрыть форму для отправления письма"><span class="visually-hidden">Закрыть</span></button>
-	<form action="https://echo.htmlacademy.ru" method="post">
+	<form id="user-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
 	    <label for="user-name">Ваше имя:</label>
         <input type="text" name="user-name" id="user-name" autofocus placeholder="Имя Фамилия" required>
@@ -150,15 +157,15 @@
 	  
 	  <p>
 	    <label for="e-mail">Ваш e-mail:</label>
-        <input type="e-mail" name="e-mail" id="e-mail" placeholder="email@example.com" required>
+        <input type="email" name="user-email" id="user-email" placeholder="email@example.com" required>
       </p>
       
 	  <p>
 	    <label for="message">Текст письма:</label>
-        <textarea name="message" id="message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
+        <textarea name="user-message" id="user-message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
       </p>
 	  
-      <input type="submit" name="submit" value="Отправить">
+      <input type="submit" name="user-submit" id="user-submit" value="Отправить">
     </form>
   </section>
 </body>

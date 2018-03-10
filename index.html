@@ -127,7 +127,7 @@
           </p>
           <p>тел. +7 (812) 275-75-75</p>
         </address>
-        <a class="write-button" href="#">Напишите нам</a>
+        <a class="write-button" href="#user-form">Напишите нам</a>
         <img src="img/map.jpg" width="1440" height="416" alt="Мы на карте">
       </div>
     </section>
@@ -146,7 +146,7 @@
   <section class="modal-write-us">
     <h2>Напишите нам</h2>
     <button class="btn-close" type="button" aria-label="Закрыть форму для отправления письма"><span class="visually-hidden">Закрыть</span></button>
-	<form action="https://echo.htmlacademy.ru" method="post">
+	<form id="user-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
 	    <label for="user-name">Ваше имя:</label>
         <input type="text" name="user-name" id="user-name" autofocus placeholder="Имя Фамилия" required>
@@ -154,15 +154,15 @@
 	  
 	  <p>
 	    <label for="e-mail">Ваш e-mail:</label>
-        <input type="e-mail" name="e-mail" id="e-mail" placeholder="email@example.com" required>
+        <input type="email" name="user-email" id="user-email" placeholder="email@example.com" required>
       </p>
       
 	  <p>
 	    <label for="message">Текст письма:</label>
-        <textarea name="message" id="message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
+        <textarea name="user-message" id="user-message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
       </p>
 	  
-      <input type="submit" name="submit" value="Отправить">
+      <input type="submit" name="user-submit" id="user-submit" value="Отправить">
     </form>
   </section>
 </body>
