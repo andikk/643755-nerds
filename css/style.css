@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.main-header,
+.slider {
+ /* серый фон для блока с меню и слайдером*/
+  background-color: #eeeeee;
+}
+  
+.main-navigation {
+  font-size: 16px;
+  line-height: 30px;
+  color: #000000;
+  font-weight: 500;
+  background-color: #eeeeee;
+}
+
+.site-navigation {
+  list-style: none;
+}
+/* состояния для ссылок в меню*/
+/* покой*/
+.user-navigation a, 
+.cart a {
+  color: #000000;
+}
+
+/* наведение*/
+.user-navigation a:hover,
+.cart a:hover {
+  color: #fb565a;
+}
+
+/* нажатие*/
+.user-navigation a:active,
+.cart a:active {
+  color: #bdbdbd;
+}
+
+/* активный, находимся на странице */
+.user-navigation a:focus,
+.cart a:focus {
+  color: #000000;
+}
+
+/* заголовок слайда. Может стоило его прописать через селектор тега? */
+.slider-header {
+  font-size: 55px;
+  line-height: 55px;
+  color: #000000;
+  font-weight: 500;  
+}
+
+.slider-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 400;  
+}
+
+.slider-button {
+  background-color: #fb565a;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.slider-button:hover {
+  background-color: #e74246;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.slider-button:active {
+  background-color: #d7373b;
+  font-size: 16px;
+  color: #e48789;
+  font-weight: 500;
+}
+
+.services {
+  background-color: #ffffff; 
+}
+
+.service-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.service-item p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;  	
+}
+
+.order-site-button {
+  background-color: #fb565a;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;	
+}
+
+.order-site-button:hover {
+  background-color: #e74246;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;	
+}
+
+.order-site-button:active{
+  background-color: #d7373b;
+  font-size: 16px;
+  color: #e48789;
+  font-weight: 500;	
+}
+
+
+.order-application-button {
+  background-color: #00ca74;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;	
+}
+
+.order-application-button:hover {
+  background-color: #00bc6c;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;	
+}
+
+.order-application-button:active{
+  background-color: #00aa62;
+  font-size: 16px;
+  color: #e48789;
+  font-weight: 500;	
+}
+
+
+
+.order-presentation-button {
+  background-color: #efc84a;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;	
+}
+
+.order-presentation-button:hover {
+  background-color: #eab534;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;	
+}
+
+.order-presentation-button:active{
+  background-color: #e5a722;
+  font-size: 16px;
+  color: #e48789;
+  font-weight: 500;	
+}
