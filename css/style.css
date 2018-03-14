@@ -1,3 +1,10 @@
+/*параметры шрифта
+regular 400
+medium 500
+bold 700
+*/
+
+
 body {
   margin: 0;
   padding: 0;
@@ -56,14 +63,6 @@ a {
   color: #000000;
 }
 
-/* заголовок слайда. Может стоило его прописать через селектор тега? */
-.slider-header {
-  font-size: 55px;
-  line-height: 55px;
-  color: #000000;
-  font-weight: 500;  
-}
-
 .button {
   text-align: center;
   vertical-align: middle;
@@ -71,7 +70,15 @@ a {
   border: none;
 }
 
-.slider-text {
+
+.slide b {
+  font-size: 55px;
+  line-height: 55px;
+  color: #000000;
+  font-weight: 500;  
+}
+
+.slide p {
   font-size: 16px;
   line-height: 24px;
   color: #000000;
@@ -99,20 +106,27 @@ a {
   font-weight: 500;
 }
 
-.services {
-  background-color: #ffffff; 
-}
 
-.service-item h3 {
+/* блок услуги */
+
+/* заголовки в наименованиях всех услуг */
+.services h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
-.service-item p {
+/* параметры шрифта в текстовом блоке для всех услуг */
+.services p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;  	
+}
+
+/* блок правил для заказа сайта */
+.service-site {
+  background-image: url("/img/illustration-1.jpg");
 }
 
 .order-site-button {
@@ -136,6 +150,10 @@ a {
   font-weight: 500;	
 }
 
+/* блок правил для заказа приложения*/
+.service-application {
+  background-image: url("/img/illustration-2.jpg");	
+}
 
 .order-application-button {
   background-color: #00ca74;
@@ -158,7 +176,10 @@ a {
   font-weight: 500;	
 }
 
-
+/* блок правил для заказа презентации*/
+.service-presentation {
+  background-image: url("/img/illustration-3.jpg");	
+}
 
 .order-presentation-button {
   background-color: #efc84a;
@@ -180,3 +201,100 @@ a {
   color: #e48789;
   font-weight: 500;	
 }
+
+/* блок правил раздела Студия*/
+.studio-left b {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.studio-left p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.studio-left h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.studio-left li {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.studio-img {
+  background-image: url("/img/nerds-illustration.jpg");
+}
+
+.studio-table caption {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;	
+  text-transform: uppercase;
+}
+
+th {
+  font-size: 45px;
+  line-height: 10px;
+  font-weight: 700;		
+}
+
+tr {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;			
+}
+
+/* блок правил для футера*/
+.contacts b {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;	
+  text-transform: uppercase;
+}
+
+.addres p {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;			
+}
+
+.write-button {
+  background-color: #fb565a;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.write-button:hover {
+  background-color: #e74246;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.write-button:active {
+  background-color: #d7373b;
+  font-size: 16px;
+  color: #e48789;
+  font-weight: 500;
+}
+
+.footer-social b {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.footer-social p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* блок правил для модального окна*/
