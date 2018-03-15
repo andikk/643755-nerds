@@ -3,12 +3,21 @@ regular 400
 medium 500
 bold 700
 */
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -20,6 +29,9 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
 
 .main-header,
 .slider {
@@ -35,31 +47,29 @@ a {
   background-color: #eeeeee;
 }
 
-.site-navigation {
-  list-style: none;
-}
+
 /* состояния для ссылок в меню*/
 /* покой*/
 .user-navigation a, 
-.cart a {
+a.cart {
   color: #000000;
 }
 
 /* наведение*/
 .user-navigation a:hover,
-.cart a:hover {
+a.cart:hover {
   color: #fb565a;
 }
 
 /* нажатие*/
 .user-navigation a:active,
-.cart a:active {
+a.cart:active {
   color: #bdbdbd;
 }
 
 /* активный, находимся на странице */
-.user-navigation a:focus,
-.cart a:focus {
+.site-navigation a:focus,
+a.cart:focus {
   color: #000000;
 }
 
@@ -68,42 +78,55 @@ a {
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
+  display: table-cell;
+  color: #ffffff;
+  background-color: #fb565a;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
 }
 
+
+.slide:nth-of-child(1) {
+  background-image: url("/img/nerds-index-slide1.png");
+  background-repeat: no-repeat;
+}
+
+.slide:nth-of-child(2) {
+  background-image: url("/img/nerds-index-slide2.png");
+  background-repeat: no-repeat;
+}
+
+.slide:nth-of-child(3) {
+  background-image: url("/img/nerds-index-slide3.png");
+  background-repeat: no-repeat;
+}
 
 .slide b {
   font-size: 55px;
   line-height: 55px;
-  color: #000000;
   font-weight: 500;  
 }
 
 .slide p {
   font-size: 16px;
   line-height: 24px;
-  color: #000000;
   font-weight: 400;  
 }
 
 .slider-button {
   background-color: #fb565a;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;
-}
+ }
 
 .slider-button:hover {
   background-color: #e74246;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;
 }
 
 .slider-button:active {
   background-color: #d7373b;
-  font-size: 16px;
   color: #e48789;
-  font-weight: 500;
 }
 
 
@@ -127,79 +150,64 @@ a {
 /* блок правил для заказа сайта */
 .service-site {
   background-image: url("/img/illustration-1.jpg");
+  background-repeat: no-repeat;
 }
 
 .order-site-button {
   background-color: #fb565a;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;	
 }
 
 .order-site-button:hover {
   background-color: #e74246;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;	
-}
+ }
 
 .order-site-button:active{
   background-color: #d7373b;
-  font-size: 16px;
   color: #e48789;
-  font-weight: 500;	
 }
 
 /* блок правил для заказа приложения*/
 .service-application {
   background-image: url("/img/illustration-2.jpg");	
+  background-repeat: no-repeat;
 }
 
 .order-application-button {
   background-color: #00ca74;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;	
 }
 
 .order-application-button:hover {
   background-color: #00bc6c;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;	
 }
 
 .order-application-button:active{
   background-color: #00aa62;
-  font-size: 16px;
   color: #e48789;
-  font-weight: 500;	
 }
 
 /* блок правил для заказа презентации*/
 .service-presentation {
   background-image: url("/img/illustration-3.jpg");	
+  background-repeat: no-repeat;
 }
 
 .order-presentation-button {
   background-color: #efc84a;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;	
 }
 
 .order-presentation-button:hover {
   background-color: #eab534;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;	
 }
 
 .order-presentation-button:active{
   background-color: #e5a722;
-  font-size: 16px;
   color: #e48789;
-  font-weight: 500;	
 }
 
 /* блок правил раздела Студия*/
@@ -230,6 +238,7 @@ a {
 
 .studio-img {
   background-image: url("/img/nerds-illustration.jpg");
+  background-repeat: no-repeat;
 }
 
 .studio-table caption {
@@ -239,7 +248,7 @@ a {
   text-transform: uppercase;
 }
 
-th {
+.stydio-table-percent > td {
   font-size: 45px;
   line-height: 10px;
   font-weight: 700;		
@@ -267,23 +276,17 @@ tr {
 
 .write-button {
   background-color: #fb565a;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;
 }
 
 .write-button:hover {
   background-color: #e74246;
-  font-size: 16px;
   color: #ffffff;
-  font-weight: 500;
 }
 
 .write-button:active {
   background-color: #d7373b;
-  font-size: 16px;
   color: #e48789;
-  font-weight: 500;
 }
 
 .footer-social b {
@@ -295,6 +298,59 @@ tr {
 .footer-social p {
   font-size: 16px;
   line-height: 22px;
+  font-weight: 400;	
+}
+
+.social-button-vk {
+  background-image: url("/img/vk-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.social-button-fb {
+  background-image: url("/img/fb-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.social-button-inst {
+  background-image: url("/img/insta-icon.svg");
+  background-repeat: no-repeat;
 }
 
 /* блок правил для модального окна*/
+.modal-write-us h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;	
+}
+
+.modal-write-us label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.modal-write-us input,
+.modal-write-us textarea {
+  font-size: 16px;
+  line-height: 18px;
+  color: #b1b1b1;
+  background-color: #ffffff;
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
+}
+
+.modal-write-us input:hover,
+.modal-write-us textarea:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.modal-write-us input:focus,
+.modal-write-us textarea:focus {
+  color: #444444;
+  border: 2px solid #000000;
+}
+
+.modal-write-us  input:invalid {
+  color: #e74246;
+  border: 2px solid #e74246;
+}
