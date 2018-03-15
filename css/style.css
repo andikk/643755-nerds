@@ -25,6 +25,13 @@ body {
   background-color: #ffffff;
 }
 
+/*Заголовок h1 отображается только на внутренней странице */
+h1 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;  
+}
+
 a {
   text-decoration: none;
 }
@@ -35,7 +42,7 @@ ul {
 
 .main-header,
 .slider {
- /* серый фон для блока с меню и слайдером*/
+ /* серый фон для хеадера, блока с меню и слайдера*/
   background-color: #eeeeee;
 }
   
@@ -354,3 +361,104 @@ tr {
   color: #e74246;
   border: 2px solid #e74246;
 }
+
+/* блок правил для внутренней  страницы*/
+/* Фильтр*/
+.template-filter fieldset,
+.template-filter input {
+  border: none;
+}
+
+.template-filter input {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.fieldset-price input {
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #eeeeee;
+}
+
+.template-filter legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.fieldset-type .fieldset-features label {
+  font-size: 16px;
+  line-height: 20px;	
+}
+
+.button-show {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.button-show:hover,
+.button-show:focus {
+  background-color: #dfdfdf;
+}
+
+.button-show:active {
+  background-color: #d5d5d5;
+}
+
+.sort a {
+  font-size: 14px;
+  line-height: 18px;
+  color: cacaca;
+  text-transform: uppercase;
+}
+
+.sort .current {
+  color: #000000;
+}
+
+/* каталог*/
+.selected-item {
+  background-color: #eeeeee;
+}
+
+.catalog-item a {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.catalog-item p {
+  line-height: 18px;
+  color: #666666;
+}
+
+/* постраничная навигация*/
+.pagination-item a {
+  line-height: 18px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.pagination-item-current {
+  background-color: #ffffff;
+  border: 2px solid #dbdbdb;
+}
+
+.pagination-list li:hover,
+.pagination-list li:focus {
+  background-color: #dfdfdf;
+  border: none;
+}
+
+.pagination-list li:active {
+  background-color: #d5d5d5;
+  border: none;
+}
+
+
+

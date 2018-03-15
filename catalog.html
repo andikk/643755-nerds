@@ -28,7 +28,7 @@
     <aside class="template-filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
       <form methot="get" action="https://echo.htmlacademy.ru">
-        <fieldset>
+        <fieldset class="fieldset-price">
           <legend><h2>Стоимость:</h2></legend>
           <label>Минимальная цена<input type="range" name="range-min-price" min="0" max="14000" step="1" value="0"></label> 
 		  <label>Максимальная цена<input type="range" name="range-max-price" min="1000" max="15000" step="1" value="15000"></label>
@@ -36,7 +36,7 @@
 		  <label>До:<input type="number" name="max-price" value="15000" placeholder="15000"></label>
         </fieldset>
 	  
-	    <fieldset>
+	    <fieldset class="fieldset-type">
           <legend><h2>Сетка:</h2></legend>
           <ul>
 		    <li><label><input type="radio" class="visually-hidden" name="check-layout" value="adaptive" checked>Адаптивная</label></li>
@@ -45,7 +45,7 @@
 		  </ul>
         </fieldset>
 	    
-		<fieldset>
+		<fieldset class="fieldset-features">
           <legend><h2>Особенности:</h2></legend>
           <ul>
 		    <li><label><input type="checkbox" class="visually-hidden" name="slider" checked>Слайдер</label></li>
@@ -56,64 +56,66 @@
 		  </ul>
         </fieldset>
 
-        <button id="btn-show" >Показать</button>
+        <button class="button button-show">Показать</button>
     </form>
 	</aside>
     
 	<section class="templates">
 	  <div class="sort">
 	    <h2>Сортировать</h2>
-        <a class="sort-link" href="#">По цене</a>
-        <a class="sort-link" href="#">По типу</a>
-        <a class="sort-link" href="#">По названию</a>
-        <a class="btn-down" href="#">По убыванию</a>
-        <a class="btn-up" href="#">По возрастанию</a>
+          <ul>
+		    <li><a class="selected" href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По названию</a></li>
+            <li><a class="btn-down" href="#">По убыванию</a></li>
+            <li><a class="btn-up" href="#">По возрастанию</a></li>
+		  <ul>
       </div>
 	  
       <h2 class="visually-hidden">Каталог</h2>
       <ul class="templates-list">
-        <li class="selected-item">
+        <li class="catalog-item selected-item">
           <img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona">
-          <a href ="#"><h3 class="item-title text-uppercase">Sedona</h3></a>
-          <p class="item-description">Информационный сайт для туристов</p>
+          <a href ="#"><h3>Sedona</h3></a>
+          <p>Информационный сайт для туристов</p>
           <a class="button" href="#">9 900 руб</a>
         </li>
-        <li>
+        <li class="catalog-item">
           <img src="img/img-pink.jpg" width="360" height="576"  alt="Pink App">
-          <a href ="#"><h3 class="item-title">Pink App</h3></a>
-          <p class="item-description">Продуктовый лендинг приложения для iOS и Android</p>
+          <a href ="#"><h3>Pink App</h3></a>
+          <p>Продуктовый лендинг приложения для iOS и Android</p>
           <a class="button" href="#">9 900 руб</a>
         </li>
-        <li>
+        <li class="catalog-item">
           <img src="img/img-barbershop.jpg" width="360" height="576" alt="Barbershop">
-          <a href ="#"><h3 class="item-title">Barbershop</h3></a>
-          <p class="item-description">Сайт салоны красоты.Для мужчин, да.</p>
+          <a href ="#"><h3>Barbershop</h3></a>
+          <p>Сайт салоны красоты.Для мужчин, да.</p>
           <a class="button" href="#">9 900 руб</a>
         </li>
-        <li>
+        <li class="catalog-item">
           <img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka">
-          <a href ="#"><h3 class="item-title">Mishka</h3></a>
-          <p class="item-description">Интернет-магазин вязаных игрушек</p>
+          <a href ="#"><h3>Mishka</h3></a>
+          <p>Интернет-магазин вязаных игрушек</p>
           <a class="button" href="#">9 900 руб</a>
         </li>
-        <li>
+        <li class="catalog-item">
           <img src="img/img-aplus.jpg" width="360" height="576" alt="A Plus">
-          <a href ="#"><h3 class="item-title">A Plus</h3></a>
-          <p class="item-description">Лендинг курсов повышения квалификации</p>
+          <a href ="#"><h3>A Plus</h3></a>
+          <p>Лендинг курсов повышения квалификации</p>
           <a class="button" href="#">9 900 руб</a>
         </li>
-        <li>
+        <li class="catalog-item">
           <img src="img/img-kvast.jpg" width="360" height="576" alt="Кваст">
-          <a href ="#"><h3 class="item-title">Кваст</h3></a>
-          <p class="item-description">Лендинг курсов повышения квалификации</p>
+          <a href ="#"><h3>">Кваст</h3></a>
+          <p>Лендинг курсов повышения квалификации</p>
           <a class="button" href="#">9 900 руб</a>
         </li>
       </ul>
     </section>
     <nav>
       <ul class="pagination-list">
-        <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-        <li class="pagination-item"><a>2</a></li>
+        <li class="pagination-item-current"><a href="#">1</a></li>
+        <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">Следующая</a></li>
       </ul>
