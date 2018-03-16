@@ -28,7 +28,7 @@ body {
 /*Заголовок h1 отображается только на внутренней странице */
 h1 {
   font-size: 55px;
-  line-height: 55px;
+  line-height: 66x;
   font-weight: 500;  
 }
 
@@ -57,19 +57,19 @@ ul {
 
 /* состояния для ссылок в меню*/
 /* покой*/
-.user-navigation a, 
+.site-navigation a, 
 a.cart {
   color: #000000;
 }
 
 /* наведение*/
-.user-navigation a:hover,
+.site-navigation a:hover,
 a.cart:hover {
   color: #fb565a;
 }
 
 /* нажатие*/
-.user-navigation a:active,
+.site-navigation a:active,
 a.cart:active {
   color: #bdbdbd;
 }
@@ -95,23 +95,23 @@ a.cart:focus {
 
 
 .slide:nth-of-child(1) {
-  background-image: url("/img/nerds-index-slide1.png");
+  background-image: url("../img/nerds-index-slide1.png");
   background-repeat: no-repeat;
 }
 
 .slide:nth-of-child(2) {
-  background-image: url("/img/nerds-index-slide2.png");
+  background-image: url("../img/nerds-index-slide2.png");
   background-repeat: no-repeat;
 }
 
 .slide:nth-of-child(3) {
-  background-image: url("/img/nerds-index-slide3.png");
+  background-image: url("../img/nerds-index-slide3.png");
   background-repeat: no-repeat;
 }
 
 .slide b {
   font-size: 55px;
-  line-height: 55px;
+  line-height: 66px;
   font-weight: 500;  
 }
 
@@ -156,7 +156,7 @@ a.cart:focus {
 
 /* блок правил для заказа сайта */
 .service-site {
-  background-image: url("/img/illustration-1.jpg");
+  background-image: url("../img/illustration-1.jpg");
   background-repeat: no-repeat;
 }
 
@@ -177,7 +177,7 @@ a.cart:focus {
 
 /* блок правил для заказа приложения*/
 .service-application {
-  background-image: url("/img/illustration-2.jpg");	
+  background-image: url("../img/illustration-2.jpg");	
   background-repeat: no-repeat;
 }
 
@@ -198,7 +198,7 @@ a.cart:focus {
 
 /* блок правил для заказа презентации*/
 .service-presentation {
-  background-image: url("/img/illustration-3.jpg");	
+  background-image: url("../img/illustration-3.jpg");	
   background-repeat: no-repeat;
 }
 
@@ -220,7 +220,7 @@ a.cart:focus {
 /* блок правил раздела Студия*/
 .studio-left b {
   font-size: 45px;
-  line-height: 45px;
+  line-height: 50.4px;
   font-weight: 500;
 }
 
@@ -244,7 +244,7 @@ a.cart:focus {
 }
 
 .studio-img {
-  background-image: url("/img/nerds-illustration.jpg");
+  background-image: url("../img/nerds-illustration.jpg");
   background-repeat: no-repeat;
 }
 
@@ -298,7 +298,7 @@ tr {
 
 .footer-social b {
   font-size: 36px;
-  line-height: 36px;
+  line-height: 43.2px;
   font-weight: 700;
 }
 
@@ -309,24 +309,24 @@ tr {
 }
 
 .social-button-vk {
-  background-image: url("/img/vk-icon.svg");
+  background-image: url("../img/vk-icon.svg");
   background-repeat: no-repeat;
 }
 
 .social-button-fb {
-  background-image: url("/img/fb-icon.svg");
+  background-image: url("../img/fb-icon.svg");
   background-repeat: no-repeat;
 }
 
 .social-button-inst {
-  background-image: url("/img/insta-icon.svg");
+  background-image: url("../img/insta-icon.svg");
   background-repeat: no-repeat;
 }
 
 /* блок правил для модального окна*/
 .modal-write-us h2 {
   font-size: 45px;
-  line-height: 45px;
+  line-height: 50.4px;
   font-weight: 500;	
 }
 
@@ -361,6 +361,31 @@ tr {
   color: #e74246;
   border: 2px solid #e74246;
 }
+
+.submit {
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  display: table-cell;
+  color: #ffffff;
+  background-color: #fb565a;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+
+.submit:hover {
+  background-color: #e74246;
+  color: #ffffff;
+}
+
+.submit:active {
+  background-color: #d7373b;
+  color: #e48789;
+}
+
 
 /* блок правил для внутренней  страницы*/
 /* Фильтр*/
