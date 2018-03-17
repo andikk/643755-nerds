@@ -410,17 +410,17 @@ a.cart:focus {
 }
 
 .button-show {
-  color: #000000;
-  background-color: #eeeeee;
+  color: #ffffff;
+  background-color: fb565a;
 }
 
-.button-show:hover,
-.button-show:focus {
-  background-color: #dfdfdf;
+.button-show:hover {
+  background-color: #e74246;
 }
 
 .button-show:active {
-  background-color: #d5d5d5;
+  background-color: #d7373b;
+  color: #e48789;
 }
 
 .sort a {
