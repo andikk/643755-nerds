@@ -32,7 +32,7 @@
 		  <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
           <a class="button slider-button" href="learnmore.html">Узнать больше</a>
 		 </div> 
-	     
+	      <!-- 
 		<div class="slide">
           <b>Любим математику как никто другой</b>
           <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
@@ -44,7 +44,8 @@
           <a class="button slider-button" href="learnmore.html">Узнать больше</a>
         </div>-->
       </section> 
-	
+	  
+
 	  <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
 		<ul class="list-unstyled services-list">
@@ -65,7 +66,8 @@
 		  </li>
         </ul>
 	  </section>
-      
+
+   
 	  <section class="studio">
 	    <h2 class="visually-hidden">О нас</h2>
 		<article class="studio-left"> 
@@ -80,7 +82,7 @@
 	    </article>
 	  
 	    <aside class="studio-right"> 
-          <div class="studio-img"></div>
+          <div class="studio-img"> </div>
 		  <table class="studio-table">
             <caption>с 2004 года Любим точность во всем:</caption>
             <tr class="stydio-table-percent"> 
@@ -99,7 +101,7 @@
 	 
 	 <section class="partner">
       <h2 class="visually-hidden">Партнеры</h2>
-        <ul>
+        <ul class="list-unstyled partner-list">
         <li>
           <a class="partner-logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-1.png" width="260" height="180" alt="Логотип HTML Academy">
@@ -125,11 +127,13 @@
   </main>
   
 <footer class="main-footer">
-    <h2 class="visually-hidden">Контакты</h2>
+    <div class="container">
+	<h2 class="visually-hidden">Контакты</h2>
     <section class="footer-map">
       <h3 class="visually-hidden">Адрес</h3>
       <div class="contacts">
-        <b>Nerds design studio</b>
+  
+	   <b>Nerds design studio</b>
         <address class="addres">
           <p>191186, Санкт-Петербург,<br>
              ул. Б. Конюшенная, д. 19/8</p>
@@ -137,12 +141,12 @@
         </address>
         <a class="button write-button" href="#user-form">Напишите нам</a>
 	   </div>
-       <img src="img/map.jpg" width="1440" height="416" alt="Мы на карте">
+       <img src="img/map.jpg" width="1440" height="416" alt="Мы на карте">     
     </section>
 	
     <section class="footer-social">
       <h3 class="visually-hidden">Мы в социальных сетях</h3>
-      <ul>
+      <ul class="social-list">
         <li><a class="social-button" href="#">Вконтакте</a></li>
         <li><a class="social-button" href="#">Фейсбук</a></li>
         <li><a class="social-button" href="#">Инстаграм</a></li>
@@ -150,6 +154,7 @@
       <b>Давайте дружить, это выгодно!</b>
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </section>
+	</div>
   </footer>
 
   <section class="modal-write-us">
@@ -171,7 +176,7 @@
         <textarea name="user-message" id="user-message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
       </p>
 	  
-      <input type="submit" class="write-button" name="user-submit" id="user-submit" value="Отправить">
+      <input type="submit" class="button write-button" name="user-submit" id="user-submit" value="Отправить">
     </form>
   </section>
 

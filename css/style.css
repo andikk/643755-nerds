@@ -16,7 +16,8 @@ body {
   background-color: #ffffff;
 
 }
-/*расположение блоков
+/*расположение блоков*/
+
 /* отобразили блоки навигации (логотип, меню и корзину) в ряд*/
 .main-navigation {
   display:flex;
@@ -39,23 +40,69 @@ ul.site-navigation li {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+/* указали стили для основного контейнера*/
+.container {
+  width:1160px;
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+}
+
+/* Наверное тут нужно прописать какие-то стили для содержимого слайдера. Какие?*/
+.slider {
+display:flex;
+/* временно для сетки */
+min-height: 430px;
+}
+
+.services {
+  /* временно для сетки */
+  min-height: 500px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.services-list {
+  display:flex;
+  justify-content: space-around;
   
 }
 
+.service-site, .service-application, .service-presentation {
+	width:300px;
+}
 
-.slider {
+.studio {
   display: flex;
-  margin-bottom: 80px;
-  width:1160px;
+  min-height: 500px;
 }
+
+.partner-list {
+  display: flex;
+  min-height: 200px;	
 }
-.slide {
-   width: 100%;
-   margin:0 auto;
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100px;
 }
 
 
 
+
+
+
+
+/*Оформление блоков */
 /*Заголовок h1 отображается только на внутренней странице */
 .title {
   font-size: 55px;
@@ -80,7 +127,7 @@ a {
 .main-header-logo {
   width: 160px;
   height: 65px;
-  
+ /* временно для сетки */ 
  display: block;
 }
 
@@ -91,8 +138,6 @@ a {
   color: #000000;
   font-weight: 500;
   background-color: #eeeeee;
-  
-
 }
 
 
@@ -119,14 +164,6 @@ a.cart:active {
 .site-navigation a:focus,
 a.cart:focus {
   color: #000000;
-}
-
-.site-navigation {
-  margin: 0;
-  padding: 0;
-    
-  /* Временно для сетки */
-  min-height: 70px;
 }
 
 
