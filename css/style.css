@@ -14,7 +14,47 @@ body {
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
+
 }
+/*расположение блоков
+/* отобразили блоки навигации (логотип, меню и корзину) в ряд*/
+.main-navigation {
+  display:flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
+  padding:0;
+}
+
+/* отобразили список меню в ряд*/
+ul.site-navigation li {
+  display:inline;
+}
+
+/* установили ширину из шаблона и запихали в эту ширину список из пунктов меню*/
+.site-navigation {
+  padding:0;
+  margin: 0;
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+}
+
+
+.slider {
+  display: flex;
+  margin-bottom: 80px;
+  width:1160px;
+}
+}
+.slide {
+   width: 100%;
+   margin:0 auto;
+}
+
+
 
 /*Заголовок h1 отображается только на внутренней странице */
 .title {
@@ -36,13 +76,23 @@ a {
  /* серый фон для хеадера, блока с меню и слайдера*/
   background-color: #eeeeee;
 }
+ 
+.main-header-logo {
+  width: 160px;
+  height: 65px;
   
+ display: block;
+}
+
+ 
 .main-navigation {
   font-size: 16px;
   line-height: 30px;
   color: #000000;
   font-weight: 500;
   background-color: #eeeeee;
+  
+
 }
 
 
@@ -70,6 +120,15 @@ a.cart:active {
 a.cart:focus {
   color: #000000;
 }
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+    
+  /* Временно для сетки */
+  min-height: 70px;
+}
+
 
 .button {
   text-align: center;
