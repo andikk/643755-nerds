@@ -372,6 +372,19 @@ a.cart {
   min-height: 200px;	
 }
 
+/*Состояния для изображений логотипов партнёров*/
+.partners-logo img {
+	opacity: 0.3;
+}
+
+ .partners-logo img:hover {
+	 opacity: 1;
+}
+
+.partners-logo img:active {
+	 opacity: 0.1;
+}
+
 /* Подвал сайта*/
 
 .main-footer {
