@@ -8,165 +8,37 @@ bold 700
 body {
   margin: 0;
   padding: 0;
+  
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000000;
+  
   background-color: #ffffff;
 
 }
-/*расположение блоков*/
-
-/* отобразили блоки навигации (логотип, меню и корзину) в ряд*/
-.main-navigation {
-  display:flex;
-  justify-content: space-between;
-  width: 1160px;
-  margin: 0 auto;
-  padding:0;
+/* Здесь будут стили для внутренней страницы */
+.inner-page {
 }
 
-/* отобразили список меню в ряд*/
-ul.site-navigation li {
-  display:inline;
+/* Служебные стили*/
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* установили ширину из шаблона и запихали в эту ширину список из пунктов меню*/
-.site-navigation {
-  padding:0;
-  margin: 0;
-  width: 440px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
+a { text-decoration: none; }
 
-/* указали стили для основного контейнера*/
-.container {
-  width:1160px;
-  display: flex;
-  flex-direction: column;
-  margin:0 auto;
-}
-
-/* Наверное тут нужно прописать какие-то стили для содержимого слайдера. Какие?*/
-.slider {
-display:flex;
-/* временно для сетки */
-min-height: 430px;
-}
-
-.services {
-  /* временно для сетки */
-  min-height: 500px;
-  border-bottom: 2px solid #eeeeee;
-}
-
-.services-list {
-  display:flex;
-  justify-content: space-around;
-  
-}
-
-.service-site, .service-application, .service-presentation {
-	width:300px;
-}
-
-.studio {
-  display: flex;
-  min-height: 500px;
-}
-
-.partner-list {
-  display: flex;
-  min-height: 200px;	
-}
-
-.contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-
-.social-list {
-  display: flex;
-  justify-content: space-between;
-  min-height: 100px;
-}
-
-
-
-
-
-
-
-/*Оформление блоков */
-/*Заголовок h1 отображается только на внутренней странице */
-.title {
-  font-size: 55px;
-  line-height: 66x;
-  font-weight: 500;  
-}
-
-a {
-  text-decoration: none;
-}
+.text-uppercase { text-transform: uppercase; }
 
 .list-unstyled {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.main-header,
-.slider {
- /* серый фон для хеадера, блока с меню и слайдера*/
-  background-color: #eeeeee;
-}
- 
-.main-header-logo {
-  width: 160px;
-  height: 65px;
- /* временно для сетки */ 
- display: block;
-}
-
- 
-.main-navigation {
-  font-size: 16px;
-  line-height: 30px;
-  color: #000000;
-  font-weight: 500;
-  background-color: #eeeeee;
-}
-
-
-/* состояния для ссылок в меню*/
-/* покой*/
-.site-navigation a, 
-a.cart {
-  color: #000000;
-}
-
-/* наведение*/
-.site-navigation a:hover,
-a.cart:hover {
-  color: #fb565a;
-}
-
-/* нажатие*/
-.site-navigation a:active,
-a.cart:active {
-  color: #bdbdbd;
-}
-
-/* активный, находимся на странице */
-.site-navigation a:focus,
-a.cart:focus {
-  color: #000000;
-}
-
-
+/* Общие стили для кнопок*/
 .button {
   text-align: center;
   vertical-align: middle;
@@ -180,6 +52,121 @@ a.cart:focus {
   font-weight: 500;
 }
 
+.button:active,
+.button:focus { color: rgba(255, 255, 255, 0.3); }
+
+/* Блок центровщик*/
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Шапка сайта */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 82px;
+  padding-top: 48px;
+  /* Временно для сетки */
+  min-height: 543px;
+  /* серый фон блока с меню и слайдера*/
+  background-color: #eeeeee;
+}
+
+/* отобразили блоки навигации (логотип, меню и корзину) в ряд*/
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  background-color: #eeeeee;
+}
+
+.main-header-logo {
+  width: 160px;
+  height: 65px;
+  /* временно для сетки */ 
+  display: block;
+}
+
+/* 
+  Добавили обертку для навигации сайта 
+  и корзины для выравнивания по вертикали
+*/
+.main-navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  min-height: 50px;
+}
+
+/* установили ширину из шаблона и запихали в эту ширину список из пунктов меню*/
+.site-navigation {
+  padding:0;
+  margin: 0;
+  width: 440px;
+  text-align: center;
+}
+
+/* 
+    отобразили элементы списока меню в ряд,
+    добавили отступ слева для элементов
+*/
+.site-navigation li {
+  margin-left:  42px;
+  display: inline;
+}
+
+/* убрали отступ слева для первого элемента*/
+.site-navigation li:first-child { margin-left: 0; }
+
+/* состояния для ссылок в меню*/
+/* покой*/
+.site-navigation a,
+a.cart {
+  font-size: 16px;
+  line-height: 30px;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* наведение*/
+.site-navigation a:hover,
+a.cart:hover {
+  color: #fb565a;
+}
+
+/* нажатие*/
+.site-navigation a:active,
+.site-navigation a:focus, 
+a.cart:active,
+a.cart:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* активный, находимся на странице */
+.site-navigation a.active,
+a.cart.active {
+  border-bottom: 2px solid #fb565a;
+}
+
+a.cart {
+  /*Стилизация для ссылки*/
+}
+
+/* Слайдер в шапке*/
+.slider {
+  /* временно для сетки */
+  display: flex;
+  min-height: 430px;
+  /* серый фон блока с меню и слайдера*/
+  background-color: #eeeeee;
+}
+
+.slide {
+}
 
 .slide:nth-of-type(1) {
   background-image: url("../img/nerds-index-slide1.png");
@@ -210,22 +197,35 @@ a.cart:focus {
 
 .slider-button {
   background-color: #fb565a;
-  color: #ffffff;
- }
+}
 
 .slider-button:hover {
   background-color: #e74246;
-  color: #ffffff;
 }
 
-.slider-button:active {
+.slider-button:active,
+.slider-button:focus, {
   background-color: #d7373b;
-  color: #e48789;
 }
 
+/* Основное содержимое */
 
-/* блок услуги */
+/* Раздел Услуги */
+.services {
+  /* временно для сетки */
+}
 
+.services-list {
+  display:flex;
+  justify-content: space-between;
+  min-height: 500px;
+}
+
+.service-site,
+.service-application, 
+.service-presentation {
+	width:305px;
+}
 /* заголовки в наименованиях всех услуг */
 .services h3 {
   font-size: 24px;
@@ -234,11 +234,12 @@ a.cart:focus {
   text-transform: uppercase;
 }
 
+
 /* параметры шрифта в текстовом блоке для всех услуг */
 .services p {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;  	
+  font-weight: 400;   
 }
 
 /* блок правил для заказа сайта */
@@ -249,59 +250,58 @@ a.cart:focus {
 
 .order-site-button {
   background-color: #fb565a;
-  color: #ffffff;
 }
 
 .order-site-button:hover {
   background-color: #e74246;
-  color: #ffffff;
- }
+}
 
 .order-site-button:active{
   background-color: #d7373b;
-  color: #e48789;
+  
 }
 
 /* блок правил для заказа приложения*/
 .service-application {
-  background-image: url("../img/illustration-2.jpg");	
+  background-image: url("../img/illustration-2.jpg"); 
   background-repeat: no-repeat;
 }
 
 .order-application-button {
   background-color: #00ca74;
-  color: #ffffff;
 }
 
 .order-application-button:hover {
   background-color: #00bc6c;
-  color: #ffffff;
 }
 
 .order-application-button:active{
   background-color: #00aa62;
-  color: #e48789;
 }
 
 /* блок правил для заказа презентации*/
 .service-presentation {
-  background-image: url("../img/illustration-3.jpg");	
+  background-image: url("../img/illustration-3.jpg"); 
   background-repeat: no-repeat;
 }
 
 .order-presentation-button {
   background-color: #efc84a;
-  color: #ffffff;
 }
 
 .order-presentation-button:hover {
   background-color: #eab534;
-  color: #ffffff;
 }
 
 .order-presentation-button:active{
   background-color: #e5a722;
-  color: #e48789;
+}
+
+/* Секция "О нас" */
+.studio {
+  display: flex;
+  min-height: 500px;
+  border-top: 2px solid #eeeeee;
 }
 
 /* блок правил раздела Студия*/
@@ -330,7 +330,9 @@ a.cart:focus {
   font-weight: 400;
 }
 
-.studio-img {
+.studio-right {
+  /* Примерно для сетки*/
+  padding-top: 370px;
   background-image: url("../img/nerds-illustration.jpg");
   background-repeat: no-repeat;
 }
@@ -338,20 +340,55 @@ a.cart:focus {
 .studio-table caption {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 700;	
+  font-weight: 700; 
   text-transform: uppercase;
 }
 
 .stydio-table-percent > td {
   font-size: 45px;
   line-height: 54px;
-  font-weight: 700;		
+  font-weight: 700;   
 }
 
 .stydio-table-percent tr {
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;			
+  font-weight: 400;     
+}
+
+/* Секция "Партнеры"*/
+
+.partner-list {
+  display: flex;
+  min-height: 200px;	
+}
+
+/* Подвал сайта*/
+
+.main-footer {
+}
+
+.footer-map {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.social-list {
+  width: 280px;
+  min-height: 100px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* блок правил для футера*/
@@ -423,7 +460,8 @@ a.cart:focus {
   font-weight: 700;
 }
 
-.modal-write-us input,
+.modal-write-us input[type="text"],
+.modal-write-us input[type="email"],
 .modal-write-us textarea {
   font-size: 16px;
   line-height: 18px;
@@ -433,23 +471,26 @@ a.cart:focus {
   border-radius: 2px;
 }
 
-.modal-write-us input:hover,
+.modal-write-us input[type="text"]:hover,
+.modal-write-us input[type="email"]:hover,
 .modal-write-us textarea:hover {
-  border: 2px solid #b4b9bb;
+  border-color: #b4b9bb;
 }
 
-.modal-write-us input:focus,
+.modal-write-us input[type="text"]:focus,
+.modal-write-us input[type="email"]:focus,
 .modal-write-us textarea:focus {
   color: #444444;
-  border: 2px solid #000000;
+  border-color: #000000;
 }
 
-.modal-write-us  input:invalid {
+.modal-write-us input[type="text"]:invalid,
+.modal-write-us input[type="email"]:invalid, {
   color: #e74246;
-  border: 2px solid #e74246;
+  border-color: #e74246;
 }
 
-.submit {
+.modal-write-us input[type="submit"] {
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -462,19 +503,29 @@ a.cart:focus {
   font-weight: 500;
 }
 
-
-.submit:hover {
+.modal-write-us input[type="submit"]:hover {
   background-color: #e74246;
   color: #ffffff;
 }
 
-.submit:active {
+.modal-write-us input[type="submit"]:active {
   background-color: #d7373b;
-  color: #e48789;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 
 /* блок правил для внутренней  страницы*/
+.inner-page .main-header {
+  min-height: 355px;
+}
+/*Заголовок h1 отображается только на внутренней странице */
+.title {
+  text-align: center;
+  font-size: 55px;
+  line-height: 66x;
+  font-weight: 500;  
+}
+
 /* Фильтр*/
 .template-filter fieldset,
 .template-filter input {
