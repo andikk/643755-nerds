@@ -20,9 +20,13 @@
 		    <li><a href="clients.html">Клиенты</a></li>
 		    <li><a href="catalog.html">Магазин</a></li>
 		    <li><a href="contacts.html">Контакты</a></li>
+			<!-- Для проверки переполнения -->
+            <!-- <li><a href="#">Клиенты</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">О нас</a></li> -->
           </ul>
+		  <a class="text-uppercase cart" href="#" >Корзина</a>
 		</div>  
-	    <a class="text-uppercase cart" href="#" >Корзина</a>
 	  </nav> 
     
 	<section class="container slider">
@@ -164,28 +168,29 @@
     </section>
   </footer>
 
-  <section class="modal-write-us">
-    <h2>Напишите нам</h2>
-    <button class="btn-close" type="button" aria-label="Закрыть форму для отправления письма"><span class="visually-hidden">Закрыть</span></button>
-	<form id="user-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-	    <label for="user-name">Ваше имя:</label>
-        <input type="text" name="user-name" id="user-name" autofocus placeholder="Имя Фамилия" required>
-      </p>
+  <div class="container">
+    <section class="modal-write-us">
+      <h2>Напишите нам</h2>
+      <button class="btn-close" type="button" aria-label="Закрыть форму для отправления письма"><span class="visually-hidden">Закрыть</span></button>
+	  <form id="user-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+	      <label for="user-name">Ваше имя:</label>
+          <input type="text" name="user-name" id="user-name" autofocus placeholder="Имя Фамилия" required>
+        </p>
 	  
-	  <p>
-	    <label for="e-mail">Ваш e-mail:</label>
-        <input type="email" name="user-email" id="user-email" placeholder="email@example.com" required>
-      </p>
+	    <p>
+	      <label for="e-mail">Ваш e-mail:</label>
+          <input type="email" name="user-email" id="user-email" placeholder="email@example.com" required>
+        </p>
       
-	  <p>
-	    <label for="message">Текст письма:</label>
-        <textarea name="user-message" id="user-message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
-      </p>
+	    <p>
+	      <label for="message">Текст письма:</label>
+          <textarea name="user-message" id="user-message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
+        </p>
 	  
-      <input type="submit" class="button write-button" name="user-submit" id="user-submit" value="Отправить">
-    </form>
-  </section>
-
+        <input type="submit" class="button write-button" name="user-submit" id="user-submit" value="Отправить">
+      </form>
+    </section>
+  </div>
   </body>
 </html>
