@@ -50,6 +50,8 @@ a { text-decoration: none; }
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  padding: 16px 53px;
+  border-radius: 4px;
 }
 
 .button:active,
@@ -396,7 +398,7 @@ a.cart {
   border-color: #eeeeee;
 }
 
-.partner-list {
+.partners-list {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
