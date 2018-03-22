@@ -493,31 +493,12 @@ a.cart {
   color: #e48789;
 }
 
+
+/* блок правил для соц.сетей*/
 .footer-social {
 	display: flex;
 	padding: 70px 0;
 }
-
-
-.social-text b {
-	margin: 0;
-	margin-top: 6px;
-	margin-bottom: 9px;
-	font-size: 36px;
-	line-height: 36px;
-	color: #000000;
-	font-weight: 700;
-}
-
-.social-text p {
-	margin: 0;
-	font-size: 16px;
-	line-height: 22px;
-	color: #444444;
-	font-weight: 400;
-}
-
-
 
 
 .social-list {
@@ -549,20 +530,24 @@ a.cart {
 }
 
 
-.social-button-vk {
-  background-image: url("../img/vk-icon.svg");
-  background-repeat: no-repeat;
+.social-text b {
+	margin: 0;
+	margin-top: 6px;
+	margin-bottom: 9px;
+	font-size: 36px;
+	line-height: 36px;
+	color: #000000;
+	font-weight: 700;
 }
 
-.social-button-fb {
-  background-image: url("../img/fb-icon.svg");
-  background-repeat: no-repeat;
+.social-text p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 22px;
+	color: #444444;
+	font-weight: 400;
 }
 
-.social-button-inst {
-  background-image: url("../img/insta-icon.svg");
-  background-repeat: no-repeat;
-}
 
 /* блок правил для модального окна*/
 .modal-write-us h2 {
