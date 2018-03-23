@@ -31,21 +31,20 @@
     
 	<section class="container slider">
       <div class="slide">
-		  <b>Долго, дорого, скурпулезно.</b>
-		  <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-          <a class="button slider-button" href="learnmore.html">Узнать больше</a>
-		 </div> 
-	      <!-- 
-		<div class="slide">
-          <b>Любим математику как никто другой</b>
-          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-          <a class="button slider-button" href="learnmore.html">Узнать больше</a>
-        </div>
-        <div class="slide">
-          <b>Только ночь, только хардкор</b>
-          <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-          <a class="button slider-button" href="learnmore.html">Узнать больше</a>
-        </div>-->
+		<b>Долго, дорого, скурпулезно.</b>
+		<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+        <a class="button slider-button" href="learnmore.html">Узнать больше</a>
+	  </div> 
+	  <div class="slide">
+        <b>Любим математику как никто другой</b>
+        <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+        <a class="button slider-button" href="learnmore.html">Узнать больше</a>
+      </div>
+      <div class="slide">
+        <b>Только ночь, только хардкор</b>
+        <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+        <a class="button slider-button" href="learnmore.html">Узнать больше</a>
+      </div>
     </section> 
   </header>
 
@@ -61,17 +60,17 @@
         <li class="service-site">
           <h3>Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-		  <a class="button order-site-button" href="order-site.html">Заказать</a>
+		  <a class="button btn-order order-site-button" href="order-site.html">Заказать</a>
 		</li>
 		<li class="service-application">
           <h3>Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-		  <a class="button order-application-button" href="order-application.html">Заказать</a>
+		  <a class="button btn-order  order-application-button" href="order-application.html">Заказать</a>
 		</li>
 		<li class="service-presentation">
           <h3>Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-		  <a class="button order-presentation-button" href="order-presentation.html">Заказать</a>
+		  <a class="button btn-order order-presentation-button" href="order-presentation.html">Заказать</a>
 		</li>
       </ul>
 	</section>
@@ -133,7 +132,7 @@
     </section>
   </main>
   
-  <footer class="main-footer" >
+  <footer class="main-footer " >
     
 	<h2 class="visually-hidden">Контакты</h2>
     
@@ -146,8 +145,8 @@
  	      <b>Nerds design studio</b>
           <address class="addres">
             <p>191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8<br>
-            тел. +7 (812) 275-75-75</p>
+            ул. Б. Конюшенная, д. 19/8</p>
+            <p>тел. +7 (812) 275-75-75</p>
           </address>
           
 		  <a class="button write-button" href="#user-form">Напишите нам</a>
@@ -199,29 +198,31 @@
     </section>
   </footer>
 
-  <div class="container">
+ 
     <section class="modal-write-us">
       <h2>Напишите нам</h2>
       <button class="btn-close" type="button" aria-label="Закрыть форму для отправления письма"><span class="visually-hidden">Закрыть</span></button>
 	  <form id="user-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
+        <div class="name-email">
+		<p>
 	      <label for="user-name">Ваше имя:</label>
           <input type="text" name="user-name" id="user-name" autofocus placeholder="Имя Фамилия" required>
         </p>
 	  
 	    <p>
-	      <label for="e-mail">Ваш e-mail:</label>
+	      <label class="lbl-email" for="e-mail">Ваш e-mail:</label>
           <input type="email" name="user-email" id="user-email" placeholder="email@example.com" required>
         </p>
-      
-	    <p>
-	      <label for="message">Текст письма:</label>
+        </div>
+	    
+		<p class="user-message">
+	      <label for="user-message">Текст письма:</label>
           <textarea name="user-message" id="user-message" value="Текст письма" placeholder="В свободной форме" required> </textarea>
         </p>
 	  
         <input type="submit" class="button write-button" name="user-submit" id="user-submit" value="Отправить">
       </form>
     </section>
-  </div>
+
   </body>
 </html>

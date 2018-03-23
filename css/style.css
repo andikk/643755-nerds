@@ -1,4 +1,5 @@
 /*параметры шрифта
+/*параметры шрифта
 regular 400
 medium 500
 bold 700
@@ -52,6 +53,7 @@ a { text-decoration: none; }
   font-weight: 500;
   padding: 16px 53px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .button:active,
@@ -110,7 +112,7 @@ a { text-decoration: none; }
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 33px;
+  margin-top: 26px;
   width: 800px;
   min-height: 37px;
 }
@@ -172,48 +174,68 @@ a.cart.active {
   border-color: #fb565a;
 }
 
+/*Стилизация для ссылки на корзину*/
 a.cart {
-  /*Стилизация для ссылки*/
+   position: relative;
 }
+
+a.cart::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: url("../img/cart-icon.svg") no-repeat;
+  top: 7px;
+  left:-40px;
+}
+
 
 /* Слайдер в шапке*/
 .slider {
-  /* временно для сетки */
   display: flex;
-  min-height: 430px;
   /* серый фон блока с меню и слайдера*/
   background-color: #eeeeee;
+ 
 }
 
 .slide {
-  min-height: 430px;
+  /* растянули на всю ширину контейнера*/
+  width: 100%;
+  padding-bottom:79px;
 }
 
 .slide:nth-of-type(1) {
-  background-image: url("../img/nerds-index-slide1.png");
-  background-repeat: no-repeat;
+ /* запихали картинку в правый верхний угол - 100% 0%*/
+  background: url("../img/nerds-index-slide1.png") no-repeat 100% 0%;
 }
 
 .slide:nth-of-type(2) {
-  background-image: url("../img/nerds-index-slide2.png");
-  background-repeat: no-repeat;
+  background: url("../img/nerds-index-slide2.png") no-repeat 100% 0%;
+  display:none;
 }
 
 .slide:nth-of-type(3) {
-  background-image: url("../img/nerds-index-slide3.png");
-  background-repeat: no-repeat;
+  background: url("../img/nerds-index-slide3.png") no-repeat 100% 0%;
+  display:none;
 }
 
 .slide b {
   font-size: 55px;
-  line-height: 66px;
+  line-height: 55px;
   font-weight: 500;  
+  margin-top:73px; 
+  margin-bottom:26px; 
+  display:inline-block;  /*чтобы можно было изменять ширину*/
+  width:380px;
 }
 
 .slide p {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;  
+  font-weight: 400;
+  width:360px;
+  margin: 0px;
+  margin-bottom: 40px;
 }
 
 .slider-button {
@@ -233,7 +255,6 @@ a.cart {
 
 /* Раздел Услуги */
 .services {
-  min-height: 350px;
   margin-bottom: 80px;
 }
 
@@ -241,6 +262,7 @@ a.cart {
   display:flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width:1105px;
 }
 
 .service-site,
@@ -257,6 +279,8 @@ a.cart {
   line-height: 30px;
   font-weight: 400;
   text-transform: uppercase;
+  margin-top:19px;
+  margin-bottom:0px;
 }
 
 
@@ -264,17 +288,24 @@ a.cart {
 .services p {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;   
+  font-weight: 400; 
+  margin-bottom:32px;  
 }
 
 /* блок правил для заказа сайта */
 .service-site {
   background-image: url("../img/illustration-1.jpg");
   background-repeat: no-repeat;
+  
+}
+
+.btn-order {
+  padding: 16px 40px;
 }
 
 .order-site-button {
   background-color: #fb565a;
+  
 }
 
 .order-site-button:hover {
@@ -325,9 +356,8 @@ a.cart {
 .studio {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 72px;
+  margin-bottom: 50px;
   padding-top: 42px;
-  min-height: 415px;
   border-top: 2px solid #eeeeee;
 }
 
@@ -338,14 +368,18 @@ a.cart {
 
 .studio-left b {
   font-size: 45px;
-  line-height: 50.4px;
+  line-height: 47px;
   font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
 .studio-left p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  margin-bottom: 40px;
 }
 
 .studio-left h3 {
@@ -353,33 +387,38 @@ a.cart {
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
+   margin-bottom: 23px;
 }
 
 .studio-left li {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  margin-bottom: 24px;
 }
 
 .studio-right {
-  /* Примерно для сетки*/
-  padding-top: 245px;
+  padding-top: 242px;
+  margin-left: 83px;
   width: 380px;
   background-image: url("../img/nerds-illustration.jpg");
   background-repeat: no-repeat;
 }
+
 
 .studio-table caption {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700; 
   text-transform: uppercase;
+  margin-bottom: 33px;
 }
 
 .stydio-table-percent > td {
   font-size: 45px;
   line-height: 54px;
-  font-weight: 700;   
+  font-weight: 700;
+  padding-bottom: 8px;
 }
 
 .stydio-table-percent tr {
@@ -392,7 +431,7 @@ a.cart {
 /* Секция "Партнеры"*/
 .partners {
   min-height: 180px;
-  margin-bottom: 80px;
+  margin-bottom: 72px;
   border-style: solid;
   border-width: 2px 0;
   border-color: #eeeeee;
@@ -402,7 +441,7 @@ a.cart {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  min-height: 180px;	
+
 }
 
 /*Состояния для изображений логотипов партнёров*/
@@ -433,7 +472,7 @@ a.cart {
 
 .footer-social {
   display: flex;
-  justify-content: space-between;
+  padding: 70px 0;
   margin-bottom: 70px;
   min-height: 80px;
 }
@@ -446,6 +485,7 @@ a.cart {
 
 .footer-map {
   position:relative;	
+  margin:0px;
 }
 
 .contacts {
@@ -464,6 +504,11 @@ a.cart {
   line-height: 30px;
   font-weight: 700;	
   text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.addres {
+	padding-bottom: 21px;
 }
 
 .addres p {
@@ -495,82 +540,165 @@ a.cart {
 
 
 /* блок правил для соц.сетей*/
-.footer-social {
-	display: flex;
-	padding: 70px 0;
-}
 
 
 .social-list {
-	display: flex;
-	justify-content: space-between;
-	width: 260px;
-	margin: 0;
-	margin-right: 140px;
-	padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin: 0;
+  margin-right: 140px;
+  padding: 0;
 }
 
 .social-button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 78px;
-	height: 78px;
-	background-color: #e1e1e1;
-	border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78px;
+  height: 78px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
 }
 
 .social-button:hover {
-	background-color: #e74246;
+  background-color: #e74246;
 }
 
 .social-button:focus {
-	background-color: #d7373b;
-	fill-opacity: 0.3;
+  background-color: #d7373b;
+  fill-opacity: 0.3;
+}
+
+.social-text {
+  padding-top: 6px;
 }
 
 
 .social-text b {
-	margin: 0;
-	margin-top: 6px;
-	margin-bottom: 9px;
-	font-size: 36px;
-	line-height: 36px;
-	color: #000000;
-	font-weight: 700;
+    display: inline-block;
+    margin-bottom: 11px;
+    font-size: 36px;
+    line-height: 36px;
+    color: #000000;
+    font-weight: 700;
 }
 
 .social-text p {
-	margin: 0;
-	font-size: 16px;
-	line-height: 22px;
-	color: #444444;
-	font-weight: 400;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+  font-weight: 400;
 }
 
 
 /* блок правил для модального окна*/
+.modal-write-us {
+  display: none;
+  position: fixed;
+  padding-left:100px;
+  padding-right:100px;
+  padding-top:65px;
+  padding-bottom:80px;
+	
+  background:white;
+	
+  top: 120px;
+  left: 20%;
+	
+/* не забыть убрать границы*/
+	outline: 1px solid #666;
+	z-index:3;
+
+}
+
+/* блок для кнопки закрыть*/
+.btn-close {
+  position: absolute;
+  top: 75px;
+  right: 90px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  border: 0;
+  background-color:white;
+  cursor: pointer;
+}
+
+/* Нарисовали крестик*/
+.btn-close::before,
+.btn-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #fecccd;
+}
+
+.btn-close::before {
+  transform: rotate(45deg);
+}
+
+.btn-close::after {
+  transform: rotate(-45deg);
+}
+
+.name-email {
+ display:flex;
+}
+
 .modal-write-us h2 {
   font-size: 45px;
   line-height: 50.4px;
   font-weight: 500;	
+  margin: 0;
+  margin-bottom:47px;
 }
 
 .modal-write-us label {
+  display:flex;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
+  margin-bottom:10px;
+}
+
+
+.lbl-email {
+  margin-left:40px;	
 }
 
 .modal-write-us input[type="text"],
 .modal-write-us input[type="email"],
 .modal-write-us textarea {
+  font: inherit;
   font-size: 16px;
   line-height: 18px;
   color: #b1b1b1;
   background-color: #ffffff;
   border: 2px solid #d7dcde;
   border-radius: 2px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+
+.modal-write-us input[type="email"] {
+  margin-left:40px;	
+}
+
+.modal-write-us input[type="text"],
+.modal-write-us input[type="email"] {
+  width:360px;
+}
+
+.modal-write-us textarea {
+  width:760px;
 }
 
 .modal-write-us input[type="text"]:hover,
@@ -603,6 +731,7 @@ a.cart {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  margin-bottom: 25px;
 }
 
 .modal-write-us input[type="submit"]:hover {
