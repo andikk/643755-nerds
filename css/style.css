@@ -9,15 +9,12 @@ bold 700
 body {
   margin: 0;
   padding: 0;
-  
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000000;
-  
   background-color: #ffffff;
-
 }
 /* Здесь будут стили для внутренней страницы */
 .inner-page {
@@ -59,13 +56,11 @@ a { text-decoration: none; }
 .button:active,
 .button:focus { color: rgba(255, 255, 255, 0.3); }
 
-
-
 /* Блок центровщик*/
 .container {
   width: 1160px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 /* Шапка сайта */
@@ -97,11 +92,11 @@ a { text-decoration: none; }
 
 .main-header-logo:hover img,
 .main-header-logo:focus img {
-	 opacity: 0.8;
+  opacity: 0.8;
 }
 
 .main-header-logo:active img {
-	 opacity: 0.3;
+  opacity: 0.3;
 }
 
 /* 
@@ -176,7 +171,7 @@ a.cart.active {
 
 /*Стилизация для ссылки на корзину*/
 a.cart {
-   position: relative;
+  position: relative;
 }
 
 a.cart::before {
@@ -195,13 +190,13 @@ a.cart::before {
   display: flex;
   /* серый фон блока с меню и слайдера*/
   background-color: #eeeeee;
- 
 }
 
 .slide {
   /* растянули на всю ширину контейнера*/
   width: 100%;
-  padding-bottom:79px;
+  /*padding-bottom:79px;*/
+  min-height: 430px;
 }
 
 .slide:nth-of-type(1) {
@@ -211,22 +206,22 @@ a.cart::before {
 
 .slide:nth-of-type(2) {
   background: url("../img/nerds-index-slide2.png") no-repeat 100% 0%;
-  display:none;
+  display: none;
 }
 
 .slide:nth-of-type(3) {
   background: url("../img/nerds-index-slide3.png") no-repeat 100% 0%;
-  display:none;
+  display: none;
 }
 
 .slide b {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;  
-  margin-top:73px; 
-  margin-bottom:26px; 
-  display:inline-block;  /*чтобы можно было изменять ширину*/
-  width:380px;
+  margin-top: 73px; 
+  margin-bottom: 26px; 
+  display: inline-block;  /*чтобы можно было изменять ширину*/
+  width: 380px;
 }
 
 .slide p {
@@ -296,7 +291,6 @@ a.cart::before {
 .service-site {
   background-image: url("../img/illustration-1.jpg");
   background-repeat: no-repeat;
-  
 }
 
 .btn-order {
@@ -305,7 +299,6 @@ a.cart::before {
 
 .order-site-button {
   background-color: #fb565a;
-  
 }
 
 .order-site-button:hover {
@@ -441,33 +434,37 @@ a.cart::before {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-
 }
 
 /*Состояния для изображений логотипов партнёров*/
 .partners-logo img {
-	opacity: 0.3;
+  opacity: 0.3;
 }
 
  .partners-logo img:hover {
-	 opacity: 1;
+  opacity: 1;
 }
 
 .partners-logo img:active {
-	 opacity: 0.1;
+  opacity: 0.1;
 }
 
 /* Подвал сайта*/
-
 .main-footer {
 }
 
 .footer-map {
+  margin-top:0px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 70px;
-  max-width: 1440px;
+  width: 1440px;
   min-height: 415px;
+ 	
+}
+
+.footer-map .container {
+  position:relative;
 }
 
 .footer-social {
@@ -477,20 +474,15 @@ a.cart::before {
   min-height: 80px;
 }
 
-
 .social-list {
   width: 280px;
   min-height: 100px;
 }
 
-.footer-map {
-  position:relative;	
-  margin:0px;
-}
-
 .contacts {
   position: absolute;
   top: 54px;
+  left:20px;
   z-index: 1;
   padding: 50px;
   width: 318px;
@@ -507,8 +499,9 @@ a.cart::before {
   display: inline-block;
   margin-bottom: 8px;
 }
+
 .addres {
-	padding-bottom: 21px;
+  padding-bottom: 21px;
 }
 
 .addres p {
@@ -540,8 +533,6 @@ a.cart::before {
 
 
 /* блок правил для соц.сетей*/
-
-
 .social-list {
   display: flex;
   justify-content: space-between;
@@ -574,14 +565,13 @@ a.cart::before {
   padding-top: 6px;
 }
 
-
 .social-text b {
-    display: inline-block;
-    margin-bottom: 11px;
-    font-size: 36px;
-    line-height: 36px;
-    color: #000000;
-    font-weight: 700;
+  display: inline-block;
+  margin-bottom: 11px;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  font-weight: 700;
 }
 
 .social-text p {
@@ -595,22 +585,23 @@ a.cart::before {
 
 /* блок правил для модального окна*/
 .modal-write-us {
-  display: none;
+  display:none;
   position: fixed;
   padding-left:100px;
   padding-right:100px;
   padding-top:65px;
   padding-bottom:80px;
-	
   background:white;
-	
-  top: 120px;
-  left: 20%;
-	
-/* не забыть убрать границы*/
-	outline: 1px solid #666;
-	z-index:3;
-
+  width:960px;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;	
+  box-sizing:border-box;
+  
+  /* не забыть убрать границы*/
+  outline: 1px solid #666;
+  z-index:3;
 }
 
 /* блок для кнопки закрыть*/
@@ -838,7 +829,6 @@ a.cart::before {
 }
 
 /* каталог*/
-
 .templates {
   width: 760px;
 }
