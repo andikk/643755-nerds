@@ -25,9 +25,13 @@ img {
   height: auto;
 }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none; 
+}
 
-.text-uppercase { text-transform: uppercase; }
+.text-uppercase {
+  text-transform: uppercase;
+}
 
 .list-unstyled {
   margin: 0;
@@ -35,16 +39,13 @@ a { text-decoration: none; }
   list-style: none;
 }
 
-/* Общие стили для кнопок*/
-
-
-
 
 /* Блок центровщик*/
 .container {
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Шапка сайта */
@@ -70,8 +71,6 @@ a { text-decoration: none; }
 .main-header-logo {
   width: 160px;
   height: 65px;
-  /* временно для сетки */ 
-  display: block;
 }
 
 .main-header-logo:hover img,
@@ -158,6 +157,7 @@ a.cart {
   position: relative;
 }
 
+/*отобразили иконку корзины*/
 a.cart::before {
   content: "";
   width: 15px;
@@ -170,11 +170,8 @@ a.cart::before {
 
 
 /* Слайдер в шапке*/
-
-
 .slider {
   position: relative;
-  
   background-color: #eeeeee;
 }
 
@@ -374,6 +371,7 @@ a.cart::before {
 
 .btn-order {
   padding: 16px 40px;
+
 }
 
 .order-site-button {
