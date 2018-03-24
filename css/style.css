@@ -849,12 +849,38 @@ a.cart::before {
   padding-bottom: 10px;	
 }
 
-
 .radio-control {
   position: relative;
   padding-left: 30px;
   cursor: pointer;
 }
+
+.radio-control:hover,
+.radio-control:focus {
+  color: #4d4d4d;
+}
+
+
+.radio-control input[type="radio"] + .radio-control-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/radio-off.svg"); 
+  width: 25px;
+  height: 25px;
+}
+
+.radio-control input[type="radio"]:checked + .radio-control-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/radio-on.svg"); 
+  width: 25px;
+  height: 25px;
+}
+
+/* не получается прописать состояния наведения*/
+
 
 
 
