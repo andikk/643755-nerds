@@ -1,5 +1,6 @@
-/*РїР°СЂР°РјРµС‚СЂС‹ С€СЂРёС„С‚Р°
-/*РїР°СЂР°РјРµС‚СЂС‹ С€СЂРёС„С‚Р°
+@@ -1,906 +0,0 @@
+/*параметры шрифта
+/*параметры шрифта
 regular 400
 medium 500
 bold 700
@@ -16,11 +17,11 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
-/* Р—РґРµСЃСЊ Р±СѓРґСѓС‚ СЃС‚РёР»Рё РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРµР№ СЃС‚СЂР°РЅРёС†С‹ */
+/* Здесь будут стили для внутренней страницы */
 .inner-page {
 }
 
-/* РЎР»СѓР¶РµР±РЅС‹Рµ СЃС‚РёР»Рё*/
+/* Служебные стили*/
 img {
   max-width: 100%;
   height: auto;
@@ -36,7 +37,7 @@ a { text-decoration: none; }
   list-style: none;
 }
 
-/* РћР±С‰РёРµ СЃС‚РёР»Рё РґР»СЏ РєРЅРѕРїРѕРє*/
+/* Общие стили для кнопок*/
 .button {
   text-align: center;
   vertical-align: middle;
@@ -56,24 +57,24 @@ a { text-decoration: none; }
 .button:active,
 .button:focus { color: rgba(255, 255, 255, 0.3); }
 
-/* Р‘Р»РѕРє С†РµРЅС‚СЂРѕРІС‰РёРє*/
+/* Блок центровщик*/
 .container {
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* РЁР°РїРєР° СЃР°Р№С‚Р° */
+/* Шапка сайта */
 .main-header {
   display: flex;
   flex-direction: column;
   margin-bottom: 82px;
-  /* Р’СЂРµРјРµРЅРЅРѕ РґР»СЏ СЃРµС‚РєРё */
+  /* Временно для сетки */
   min-height: 545px;
   background-color: #eeeeee;
 }
 
-/* РѕС‚РѕР±СЂР°Р·РёР»Рё Р±Р»РѕРєРё РЅР°РІРёРіР°С†РёРё (Р»РѕРіРѕС‚РёРї, РјРµРЅСЋ Рё РєРѕСЂР·РёРЅСѓ) РІ СЂСЏРґ*/
+/* отобразили блоки навигации (логотип, меню и корзину) в ряд*/
 .main-navigation {
   display: flex;
   justify-content: space-between;
@@ -86,7 +87,7 @@ a { text-decoration: none; }
 .main-header-logo {
   width: 160px;
   height: 65px;
-  /* РІСЂРµРјРµРЅРЅРѕ РґР»СЏ СЃРµС‚РєРё */ 
+  /* временно для сетки */ 
   display: block;
 }
 
@@ -100,8 +101,8 @@ a { text-decoration: none; }
 }
 
 /* 
-  Р”РѕР±Р°РІРёР»Рё РѕР±РµСЂС‚РєСѓ РґР»СЏ РЅР°РІРёРіР°С†РёРё СЃР°Р№С‚Р° 
-  Рё РєРѕСЂР·РёРЅС‹ РґР»СЏ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ РїРѕ РІРµСЂС‚РёРєР°Р»Рё
+  Добавили обертку для навигации сайта 
+  и корзины для выравнивания по вертикали
 */
 .main-navigation-wrapper {
   display: flex;
@@ -112,7 +113,7 @@ a { text-decoration: none; }
   min-height: 37px;
 }
 
-/* СѓСЃС‚Р°РЅРѕРІРёР»Рё С€РёСЂРёРЅСѓ РёР· С€Р°Р±Р»РѕРЅР° Рё Р·Р°РїРёС…Р°Р»Рё РІ СЌС‚Сѓ С€РёСЂРёРЅСѓ СЃРїРёСЃРѕРє РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ*/
+/* установили ширину из шаблона и запихали в эту ширину список из пунктов меню*/
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -124,21 +125,21 @@ a { text-decoration: none; }
 }
 
 /* 
-    РѕС‚РѕР±СЂР°Р·РёР»Рё СЌР»РµРјРµРЅС‚С‹ СЃРїРёСЃРѕРєР° РјРµРЅСЋ РІ СЂСЏРґ,
-    РґРѕР±Р°РІРёР»Рё РѕС‚СЃС‚СѓРї СЃР»РµРІР° РґР»СЏ СЌР»РµРјРµРЅС‚РѕРІ
+    отобразили элементы списока меню в ряд,
+    добавили отступ слева для элементов
 */
 .site-navigation li {
   margin-left:  45px;
   height: 38px;
   text-align: left;
 }
-/* РЈР±РµСЂРµРј РѕС‚СЃС‚СѓРї Сѓ 1 Рё РєР°Р¶РґРѕРіРѕ 5-РіРѕ СЌР»РµРјРµРЅС‚Р° */
+/* Уберем отступ у 1 и каждого 5-го элемента */
 .site-navigation li:nth-of-type(4n+1) {
   margin-left: 0;
 }
 
-/* СЃРѕСЃС‚РѕСЏРЅРёСЏ РґР»СЏ СЃСЃС‹Р»РѕРє РІ РјРµРЅСЋ*/
-/* РїРѕРєРѕР№*/
+/* состояния для ссылок в меню*/
+/* покой*/
 .site-navigation a,
 a.cart {
   padding-bottom: 10px;
@@ -149,13 +150,13 @@ a.cart {
   border-bottom: 2px solid transparent;
 }
 
-/* РЅР°РІРµРґРµРЅРёРµ*/
+/* наведение*/
 .site-navigation a:hover,
 a.cart:hover {
   color: #fb565a;
 }
 
-/* РЅР°Р¶Р°С‚РёРµ*/
+/* нажатие*/
 .site-navigation a:active,
 .site-navigation a:focus, 
 a.cart:active,
@@ -163,13 +164,13 @@ a.cart:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* Р°РєС‚РёРІРЅС‹Р№, РЅР°С…РѕРґРёРјСЃСЏ РЅР° СЃС‚СЂР°РЅРёС†Рµ */
+/* активный, находимся на странице */
 .site-navigation a.active,
 a.cart.active {
   border-color: #fb565a;
 }
 
-/*РЎС‚РёР»РёР·Р°С†РёСЏ РґР»СЏ СЃСЃС‹Р»РєРё РЅР° РєРѕСЂР·РёРЅСѓ*/
+/*Стилизация для ссылки на корзину*/
 a.cart {
   position: relative;
 }
@@ -185,22 +186,22 @@ a.cart::before {
 }
 
 
-/* РЎР»Р°Р№РґРµСЂ РІ С€Р°РїРєРµ*/
+/* Слайдер в шапке*/
 .slider {
   display: flex;
-  /* СЃРµСЂС‹Р№ С„РѕРЅ Р±Р»РѕРєР° СЃ РјРµРЅСЋ Рё СЃР»Р°Р№РґРµСЂР°*/
+  /* серый фон блока с меню и слайдера*/
   background-color: #eeeeee;
 }
 
 .slide {
-  /* СЂР°СЃС‚СЏРЅСѓР»Рё РЅР° РІСЃСЋ С€РёСЂРёРЅСѓ РєРѕРЅС‚РµР№РЅРµСЂР°*/
+  /* растянули на всю ширину контейнера*/
   width: 100%;
   /*padding-bottom:79px;*/
   min-height: 430px;
 }
 
 .slide:nth-of-type(1) {
- /* Р·Р°РїРёС…Р°Р»Рё РєР°СЂС‚РёРЅРєСѓ РІ РїСЂР°РІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР» - 100% 0%*/
+ /* запихали картинку в правый верхний угол - 100% 0%*/
   background: url("../img/nerds-index-slide1.png") no-repeat 100% 0%;
 }
 
@@ -220,7 +221,7 @@ a.cart::before {
   font-weight: 500;  
   margin-top: 73px; 
   margin-bottom: 26px; 
-  display: inline-block;  /*С‡С‚РѕР±С‹ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РёР·РјРµРЅСЏС‚СЊ С€РёСЂРёРЅСѓ*/
+  display: inline-block;  /*чтобы можно было изменять ширину*/
   width: 380px;
 }
 
@@ -246,9 +247,9 @@ a.cart::before {
   background-color: #d7373b;
 }
 
-/* РћСЃРЅРѕРІРЅРѕРµ СЃРѕРґРµСЂР¶РёРјРѕРµ */
+/* Основное содержимое */
 
-/* Р Р°Р·РґРµР» РЈСЃР»СѓРіРё */
+/* Раздел Услуги */
 .services {
   margin-bottom: 80px;
 }
@@ -268,7 +269,7 @@ a.cart::before {
   min-height: 178px;
 }
 
-/* Р·Р°РіРѕР»РѕРІРєРё РІ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏС… РІСЃРµС… СѓСЃР»СѓРі */
+/* заголовки в наименованиях всех услуг */
 .services h3 {
   font-size: 24px;
   line-height: 30px;
@@ -279,7 +280,7 @@ a.cart::before {
 }
 
 
-/* РїР°СЂР°РјРµС‚СЂС‹ С€СЂРёС„С‚Р° РІ С‚РµРєСЃС‚РѕРІРѕРј Р±Р»РѕРєРµ РґР»СЏ РІСЃРµС… СѓСЃР»СѓРі */
+/* параметры шрифта в текстовом блоке для всех услуг */
 .services p {
   font-size: 16px;
   line-height: 24px;
@@ -287,7 +288,7 @@ a.cart::before {
   margin-bottom:32px;  
 }
 
-/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° СЃР°Р№С‚Р° */
+/* блок правил для заказа сайта */
 .service-site {
   background-image: url("../img/illustration-1.jpg");
   background-repeat: no-repeat;
@@ -309,7 +310,7 @@ a.cart::before {
   background-color: #d7373b;
 }
 
-/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° РїСЂРёР»РѕР¶РµРЅРёСЏ*/
+/* блок правил для заказа приложения*/
 .service-application {
   background-image: url("../img/illustration-2.jpg"); 
   background-repeat: no-repeat;
@@ -327,7 +328,7 @@ a.cart::before {
   background-color: #00aa62;
 }
 
-/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° РїСЂРµР·РµРЅС‚Р°С†РёРё*/
+/* блок правил для заказа презентации*/
 .service-presentation {
   background-image: url("../img/illustration-3.jpg"); 
   background-repeat: no-repeat;
@@ -345,7 +346,7 @@ a.cart::before {
   background-color: #e5a722;
 }
 
-/* РЎРµРєС†РёСЏ "Рћ РЅР°СЃ" */
+/* Секция "О нас" */
 .studio {
   display: flex;
   justify-content: space-between;
@@ -354,7 +355,7 @@ a.cart::before {
   border-top: 2px solid #eeeeee;
 }
 
-/* Р±Р»РѕРє РїСЂР°РІРёР» СЂР°Р·РґРµР»Р° РЎС‚СѓРґРёСЏ*/
+/* блок правил раздела Студия*/
 .studio-left {
   width: 760px;
 }
@@ -421,7 +422,7 @@ a.cart::before {
 }
 
 
-/* РЎРµРєС†РёСЏ "РџР°СЂС‚РЅРµСЂС‹"*/
+/* Секция "Партнеры"*/
 .partners {
   min-height: 180px;
   margin-bottom: 72px;
@@ -436,7 +437,7 @@ a.cart::before {
   align-items: stretch;
 }
 
-/*РЎРѕСЃС‚РѕСЏРЅРёСЏ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ Р»РѕРіРѕС‚РёРїРѕРІ РїР°СЂС‚РЅС‘СЂРѕРІ*/
+/*Состояния для изображений логотипов партнёров*/
 .partners-logo img {
   opacity: 0.3;
 }
@@ -449,7 +450,7 @@ a.cart::before {
   opacity: 0.1;
 }
 
-/* РџРѕРґРІР°Р» СЃР°Р№С‚Р°*/
+/* Подвал сайта*/
 .main-footer {
 }
 
@@ -490,7 +491,7 @@ a.cart::before {
   box-sizing: border-box;
 }
 
-/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ С„СѓС‚РµСЂР°*/
+/* блок правил для футера*/
 .contacts b {
   font-size: 18px;
   line-height: 30px;
@@ -532,7 +533,7 @@ a.cart::before {
 }
 
 
-/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ СЃРѕС†.СЃРµС‚РµР№*/
+/* блок правил для соц.сетей*/
 .social-list {
   display: flex;
   justify-content: space-between;
@@ -583,7 +584,7 @@ a.cart::before {
 }
 
 
-/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ РјРѕРґР°Р»СЊРЅРѕРіРѕ РѕРєРЅР°*/
+/* блок правил для модального окна*/
 .modal-write-us {
   display:none;
   position: fixed;
@@ -599,12 +600,12 @@ a.cart::before {
   margin: 0 auto;	
   box-sizing:border-box;
   
-  /* РЅРµ Р·Р°Р±С‹С‚СЊ СѓР±СЂР°С‚СЊ РіСЂР°РЅРёС†С‹*/
+  /* не забыть убрать границы*/
   outline: 1px solid #666;
   z-index:3;
 }
 
-/* Р±Р»РѕРє РґР»СЏ РєРЅРѕРїРєРё Р·Р°РєСЂС‹С‚СЊ*/
+/* блок для кнопки закрыть*/
 .btn-close {
   position: absolute;
   top: 75px;
@@ -617,7 +618,7 @@ a.cart::before {
   cursor: pointer;
 }
 
-/* РќР°СЂРёСЃРѕРІР°Р»Рё РєСЂРµСЃС‚РёРє*/
+/* Нарисовали крестик*/
 .btn-close::before,
 .btn-close::after {
   content: "";
@@ -736,7 +737,7 @@ a.cart::before {
 }
 
 
-/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРµР№  СЃС‚СЂР°РЅРёС†С‹*/
+/* блок правил для внутренней  страницы*/
 .inner-page .main-header {
   min-height: 355px;
 }
@@ -744,7 +745,7 @@ a.cart::before {
 .inner-page .main-navigation { 
   margin-bottom: 75px; 
 }
-/*Р—Р°РіРѕР»РѕРІРѕРє h1 РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РЅР° РІРЅСѓС‚СЂРµРЅРЅРµР№ СЃС‚СЂР°РЅРёС†Рµ */
+/*Заголовок h1 отображается только на внутренней странице */
 .title {
   margin-top: 0;
   text-align: center;
@@ -753,12 +754,122 @@ a.cart::before {
   font-weight: 500;
 }
 
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  
+  border: none;
+  
+  /* Для демонстрации */
+  width: 260px;
+  margin: 50px auto; 
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  background-color: #f1f1f1;
+  
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  
+  font:inherit;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
+
+
+
+
 .catalog {
   display: flex;
   justify-content: space-between;
 }
 
-/* Р¤РёР»СЊС‚СЂ*/
+/* Фильтр*/
 .template-filter {
   width: 260px;
 }
@@ -828,7 +939,7 @@ a.cart::before {
   color: #000000;
 }
 
-/* РєР°С‚Р°Р»РѕРі*/
+/* каталог*/
 .templates {
   width: 760px;
 }
@@ -863,7 +974,7 @@ a.cart::before {
   color: #666666;
 }
 
-/* РїРѕСЃС‚СЂР°РЅРёС‡РЅР°СЏ РЅР°РІРёРіР°С†РёСЏ*/
+/* постраничная навигация*/
 .pagination-item a {
   line-height: 18px;
   font-weight: 500;

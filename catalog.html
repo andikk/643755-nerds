@@ -34,30 +34,57 @@
     <h1 class="title visually-hidden">Магазин готовых шаблонов</h1>
     <aside class="template-filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
-      <form methot="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="fieldset-price">
-          <legend>
-		    <h2>Стоимость:</h2>
-		  </legend>
-          <label>Минимальная цена<input type="range" name="range-min-price" min="0" max="14000" step="1" value="0"></label> 
-		  <label>Максимальная цена<input type="range" name="range-max-price" min="1000" max="15000" step="1" value="15000"></label>
-		  <p>
-		    <label>От:<input type="number" name="min-price" value="0" placeholder="0"></label> 
-		  </p>		  
-		  <p>
-		    <label>До:<input type="number" name="max-price" value="15000" placeholder="15000"></label>
-          </p>    
-		</fieldset>
-	  
-	    <fieldset class="fieldset-type">
-          <legend><h2>Сетка:</h2></legend>
-          <ul class="list-unstyled">
-		    <li><label><input type="radio" class="visually-hidden" name="check-layout" value="adaptive" checked>Адаптивная</label></li>
-            <li><label><input type="radio" class="visually-hidden" name="check-layout" value="fixed">Фиксированная</label></li>
-            <li><label><input type="radio" class="visually-hidden" name="check-layout" value="elastic">Резиновая</label></li>
-		  </ul>
+     
+	 <form methot="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="filter-item">
+          <legend>Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="margin-left: 20%; width: 30%"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+            </div>
+          </div>
         </fieldset>
-	    
+  
+        <fieldset>
+          <legend>
+            <h2>Сетка:</h2>
+		  </legend>
+          
+		  <ul class="list-layout list-unstyled">
+            <li>
+			  <label class="radio-control">
+			    <input type="radio" class="visually-hidden" name="layout" value="adaptive" checked>
+				<span class="radio-control-indicator"></span>
+				Адаптивная
+			  </label>
+			</li>
+            
+			<li>
+			  <label class="radio-control">
+			    <input type="radio" class="visually-hidden" name="layout" value="fixed">
+			    <span class="radio-control-indicator"></span>
+			    Фиксированная
+			  </label>
+			</li>
+            
+			<li>
+			  <label class="radio-control">
+			    <input type="radio" class="visually-hidden" name="layout" value="elastic">
+			    <span class="radio-control-indicator"></span>
+				Резиновая
+			  </label>
+			</li>
+          </ul>
+        
+		</fieldset>	  
 		
 		
 		<fieldset class="fieldset-features">
