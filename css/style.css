@@ -1,4 +1,3 @@
-@@ -1,906 +0,0 @@
 /*параметры шрифта
 /*параметры шрифта
 regular 400
@@ -761,9 +760,6 @@ a.cart::before {
   
   border: none;
   
-  /* Для демонстрации */
-  width: 260px;
-  margin: 50px auto; 
 }
 
 .range-filter {
