@@ -882,6 +882,45 @@ a.cart::before {
 /* не получается прописать состояния наведения*/
 
 
+/*блок для особенностей*/
+.list-features li {
+  padding-bottom: 10px;	
+}
+
+.checkbox-control {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+
+.checkbox-control:hover,
+.checkbox-control:focus {
+  color: #4d4d4d;
+}
+
+
+.checkbox-control input[type="checkbox"] + .checkbox-control-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/checkbox-off.svg"); 
+  background-repeat:no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.checkbox-control input[type="checkbox"]:checked + .checkbox-control-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/checkbox-on.svg"); 
+  background-repeat:no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+
 
 
 .catalog {
