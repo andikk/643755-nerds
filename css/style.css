@@ -529,7 +529,7 @@ a.cart::before {
 /* Подвал сайта*/
 
 .main-footer {
-position:relative;
+  position:relative;
 }
 
 .footer-map {
@@ -539,13 +539,17 @@ position:relative;
 
 .contacts {
   position: absolute;
-  top: 54px;
+  top: 40px;
   left: 20px;
   z-index: 1;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   width: 318px;
   background-color: #ffffff;
   box-sizing: border-box;
+  
 }
 
 
