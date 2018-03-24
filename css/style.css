@@ -1,4 +1,4 @@
-/*параметры шрифта
+/*РїР°СЂР°РјРµС‚СЂС‹ С€СЂРёС„С‚Р°
 regular 400
 medium 500
 bold 700
@@ -15,11 +15,11 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
-/* Здесь будут стили для внутренней страницы */
+/* Р—РґРµСЃСЊ Р±СѓРґСѓС‚ СЃС‚РёР»Рё РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРµР№ СЃС‚СЂР°РЅРёС†С‹ */
 .inner-page {
 }
 
-/* Служебные стили*/
+/* РЎР»СѓР¶РµР±РЅС‹Рµ СЃС‚РёР»Рё*/
 img {
   max-width: 100%;
   height: auto;
@@ -35,29 +35,29 @@ a { text-decoration: none; }
   list-style: none;
 }
 
-/* Общие стили для кнопок*/
+/* РћР±С‰РёРµ СЃС‚РёР»Рё РґР»СЏ РєРЅРѕРїРѕРє*/
 
 
 
 
-/* Блок центровщик*/
+/* Р‘Р»РѕРє С†РµРЅС‚СЂРѕРІС‰РёРє*/
 .container {
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Шапка сайта */
+/* РЁР°РїРєР° СЃР°Р№С‚Р° */
 .main-header {
   display: flex;
   flex-direction: column;
   margin-bottom: 82px;
-  /* Временно для сетки */
+  /* Р’СЂРµРјРµРЅРЅРѕ РґР»СЏ СЃРµС‚РєРё */
   min-height: 545px;
   background-color: #eeeeee;
 }
 
-/* отобразили блоки навигации (логотип, меню и корзину) в ряд*/
+/* РѕС‚РѕР±СЂР°Р·РёР»Рё Р±Р»РѕРєРё РЅР°РІРёРіР°С†РёРё (Р»РѕРіРѕС‚РёРї, РјРµРЅСЋ Рё РєРѕСЂР·РёРЅСѓ) РІ СЂСЏРґ*/
 .main-navigation {
   display: flex;
   justify-content: space-between;
@@ -70,7 +70,7 @@ a { text-decoration: none; }
 .main-header-logo {
   width: 160px;
   height: 65px;
-  /* временно для сетки */ 
+  /* РІСЂРµРјРµРЅРЅРѕ РґР»СЏ СЃРµС‚РєРё */ 
   display: block;
 }
 
@@ -84,8 +84,8 @@ a { text-decoration: none; }
 }
 
 /* 
-  Добавили обертку для навигации сайта 
-  и корзины для выравнивания по вертикали
+  Р”РѕР±Р°РІРёР»Рё РѕР±РµСЂС‚РєСѓ РґР»СЏ РЅР°РІРёРіР°С†РёРё СЃР°Р№С‚Р° 
+  Рё РєРѕСЂР·РёРЅС‹ РґР»СЏ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ РїРѕ РІРµСЂС‚РёРєР°Р»Рё
 */
 .main-navigation-wrapper {
   display: flex;
@@ -96,7 +96,7 @@ a { text-decoration: none; }
   min-height: 37px;
 }
 
-/* установили ширину из шаблона и запихали в эту ширину список из пунктов меню*/
+/* СѓСЃС‚Р°РЅРѕРІРёР»Рё С€РёСЂРёРЅСѓ РёР· С€Р°Р±Р»РѕРЅР° Рё Р·Р°РїРёС…Р°Р»Рё РІ СЌС‚Сѓ С€РёСЂРёРЅСѓ СЃРїРёСЃРѕРє РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ*/
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -108,21 +108,21 @@ a { text-decoration: none; }
 }
 
 /* 
-    отобразили элементы списока меню в ряд,
-    добавили отступ слева для элементов
+    РѕС‚РѕР±СЂР°Р·РёР»Рё СЌР»РµРјРµРЅС‚С‹ СЃРїРёСЃРѕРєР° РјРµРЅСЋ РІ СЂСЏРґ,
+    РґРѕР±Р°РІРёР»Рё РѕС‚СЃС‚СѓРї СЃР»РµРІР° РґР»СЏ СЌР»РµРјРµРЅС‚РѕРІ
 */
 .site-navigation li {
   margin-left:  45px;
   height: 38px;
   text-align: left;
 }
-/* Уберем отступ у 1 и каждого 5-го элемента */
+/* РЈР±РµСЂРµРј РѕС‚СЃС‚СѓРї Сѓ 1 Рё РєР°Р¶РґРѕРіРѕ 5-РіРѕ СЌР»РµРјРµРЅС‚Р° */
 .site-navigation li:nth-of-type(4n+1) {
   margin-left: 0;
 }
 
-/* состояния для ссылок в меню*/
-/* покой*/
+/* СЃРѕСЃС‚РѕСЏРЅРёСЏ РґР»СЏ СЃСЃС‹Р»РѕРє РІ РјРµРЅСЋ*/
+/* РїРѕРєРѕР№*/
 .site-navigation a,
 a.cart {
   padding-bottom: 10px;
@@ -133,13 +133,13 @@ a.cart {
   border-bottom: 2px solid transparent;
 }
 
-/* наведение*/
+/* РЅР°РІРµРґРµРЅРёРµ*/
 .site-navigation a:hover,
 a.cart:hover {
   color: #fb565a;
 }
 
-/* нажатие*/
+/* РЅР°Р¶Р°С‚РёРµ*/
 .site-navigation a:active,
 .site-navigation a:focus, 
 a.cart:active,
@@ -147,13 +147,13 @@ a.cart:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* активный, находимся на странице */
+/* Р°РєС‚РёРІРЅС‹Р№, РЅР°С…РѕРґРёРјСЃСЏ РЅР° СЃС‚СЂР°РЅРёС†Рµ */
 .site-navigation a.active,
 a.cart.active {
   border-color: #fb565a;
 }
 
-/*Стилизация для ссылки на корзину*/
+/*РЎС‚РёР»РёР·Р°С†РёСЏ РґР»СЏ СЃСЃС‹Р»РєРё РЅР° РєРѕСЂР·РёРЅСѓ*/
 a.cart {
   position: relative;
 }
@@ -169,7 +169,7 @@ a.cart::before {
 }
 
 
-/* Слайдер в шапке*/
+/* РЎР»Р°Р№РґРµСЂ РІ С€Р°РїРєРµ*/
 
 
 .slider {
@@ -325,9 +325,9 @@ a.cart::before {
 
 
 
-/* Основное содержимое */
+/* РћСЃРЅРѕРІРЅРѕРµ СЃРѕРґРµСЂР¶РёРјРѕРµ */
 
-/* Раздел Услуги */
+/* Р Р°Р·РґРµР» РЈСЃР»СѓРіРё */
 .services {
   margin-bottom: 80px;
 }
@@ -347,7 +347,7 @@ a.cart::before {
   min-height: 178px;
 }
 
-/* заголовки в наименованиях всех услуг */
+/* Р·Р°РіРѕР»РѕРІРєРё РІ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏС… РІСЃРµС… СѓСЃР»СѓРі */
 .services h3 {
   font-size: 24px;
   line-height: 30px;
@@ -358,7 +358,7 @@ a.cart::before {
 }
 
 
-/* параметры шрифта в текстовом блоке для всех услуг */
+/* РїР°СЂР°РјРµС‚СЂС‹ С€СЂРёС„С‚Р° РІ С‚РµРєСЃС‚РѕРІРѕРј Р±Р»РѕРєРµ РґР»СЏ РІСЃРµС… СѓСЃР»СѓРі */
 .services p {
   font-size: 16px;
   line-height: 24px;
@@ -366,7 +366,7 @@ a.cart::before {
   margin-bottom:32px;  
 }
 
-/* блок правил для заказа сайта */
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° СЃР°Р№С‚Р° */
 .service-site {
   background-image: url("../img/illustration-1.jpg");
   background-repeat: no-repeat;
@@ -388,7 +388,7 @@ a.cart::before {
   background-color: #d7373b;
 }
 
-/* блок правил для заказа приложения*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° РїСЂРёР»РѕР¶РµРЅРёСЏ*/
 .service-application {
   background-image: url("../img/illustration-2.jpg"); 
   background-repeat: no-repeat;
@@ -406,7 +406,7 @@ a.cart::before {
   background-color: #00aa62;
 }
 
-/* блок правил для заказа презентации*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° РїСЂРµР·РµРЅС‚Р°С†РёРё*/
 .service-presentation {
   background-image: url("../img/illustration-3.jpg"); 
   background-repeat: no-repeat;
@@ -424,7 +424,7 @@ a.cart::before {
   background-color: #e5a722;
 }
 
-/* Секция "О нас" */
+/* РЎРµРєС†РёСЏ "Рћ РЅР°СЃ" */
 .studio {
   display: flex;
   justify-content: space-between;
@@ -433,7 +433,7 @@ a.cart::before {
   border-top: 2px solid #eeeeee;
 }
 
-/* блок правил раздела Студия*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» СЂР°Р·РґРµР»Р° РЎС‚СѓРґРёСЏ*/
 .studio-left {
   width: 760px;
 }
@@ -500,7 +500,7 @@ a.cart::before {
 }
 
 
-/* Секция "Партнеры"*/
+/* РЎРµРєС†РёСЏ "РџР°СЂС‚РЅРµСЂС‹"*/
 .partners {
   min-height: 180px;
   margin-bottom: 72px;
@@ -515,7 +515,7 @@ a.cart::before {
   align-items: stretch;
 }
 
-/*Состояния для изображений логотипов партнёров*/
+/*РЎРѕСЃС‚РѕСЏРЅРёСЏ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ Р»РѕРіРѕС‚РёРїРѕРІ РїР°СЂС‚РЅС‘СЂРѕРІ*/
 .partners-logo img {
   opacity: 0.3;
 }
@@ -528,7 +528,7 @@ a.cart::before {
   opacity: 0.1;
 }
 
-/* Подвал сайта*/
+/* РџРѕРґРІР°Р» СЃР°Р№С‚Р°*/
 .main-footer {
 }
 
@@ -569,7 +569,7 @@ a.cart::before {
   box-sizing: border-box;
 }
 
-/* блок правил для футера*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ С„СѓС‚РµСЂР°*/
 .contacts b {
   font-size: 18px;
   line-height: 30px;
@@ -611,7 +611,7 @@ a.cart::before {
 }
 
 
-/* блок правил для соц.сетей*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ СЃРѕС†.СЃРµС‚РµР№*/
 .social-list {
   display: flex;
   justify-content: space-between;
@@ -662,7 +662,7 @@ a.cart::before {
 }
 
 
-/* блок правил для модального окна*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ РјРѕРґР°Р»СЊРЅРѕРіРѕ РѕРєРЅР°*/
 .modal-write-us {
   display:none;
   position: fixed;
@@ -678,12 +678,12 @@ a.cart::before {
   margin: 0 auto;	
   box-sizing:border-box;
   
-  /* не забыть убрать границы*/
+  /* РЅРµ Р·Р°Р±С‹С‚СЊ СѓР±СЂР°С‚СЊ РіСЂР°РЅРёС†С‹*/
   outline: 1px solid #666;
   z-index:3;
 }
 
-/* блок для кнопки закрыть*/
+/* Р±Р»РѕРє РґР»СЏ РєРЅРѕРїРєРё Р·Р°РєСЂС‹С‚СЊ*/
 .btn-close {
   position: absolute;
   top: 75px;
@@ -696,7 +696,7 @@ a.cart::before {
   cursor: pointer;
 }
 
-/* Нарисовали крестик*/
+/* РќР°СЂРёСЃРѕРІР°Р»Рё РєСЂРµСЃС‚РёРє*/
 .btn-close::before,
 .btn-close::after {
   content: "";
@@ -815,7 +815,7 @@ a.cart::before {
 }
 
 
-/* блок правил для внутренней  страницы*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРµР№  СЃС‚СЂР°РЅРёС†С‹*/
 .inner-page .main-header {
   min-height: 355px;
 }
@@ -823,7 +823,7 @@ a.cart::before {
 .inner-page .main-navigation { 
   margin-bottom: 75px; 
 }
-/*Заголовок h1 отображается только на внутренней странице */
+/*Р—Р°РіРѕР»РѕРІРѕРє h1 РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РЅР° РІРЅСѓС‚СЂРµРЅРЅРµР№ СЃС‚СЂР°РЅРёС†Рµ */
 .title {
   margin-top: 0;
   text-align: center;
@@ -832,7 +832,7 @@ a.cart::before {
   font-weight: 500;
 }
 
-/*Блок формы Стоимость*/
+/*Р‘Р»РѕРє С„РѕСЂРјС‹ РЎС‚РѕРёРјРѕСЃС‚СЊ*/
 .filter-item {
   margin: 0;
   padding: 0;
@@ -923,7 +923,7 @@ a.cart::before {
   text-align: right;
 }
 
-/*блок Сетки*/
+/*Р±Р»РѕРє РЎРµС‚РєРё*/
 .list-layout li {
   padding-bottom: 10px;	
 }
@@ -958,10 +958,10 @@ a.cart::before {
   height: 25px;
 }
 
-/* не получается прописать состояния наведения*/
+/* РЅРµ РїРѕР»СѓС‡Р°РµС‚СЃСЏ РїСЂРѕРїРёСЃР°С‚СЊ СЃРѕСЃС‚РѕСЏРЅРёСЏ РЅР°РІРµРґРµРЅРёСЏ*/
 
 
-/*блок для особенностей*/
+/*Р±Р»РѕРє РґР»СЏ РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№*/
 .list-features li {
   padding-bottom: 10px;	
 }
@@ -1007,7 +1007,7 @@ a.cart::before {
   justify-content: space-between;
 }
 
-/* Фильтр*/
+/* Р¤РёР»СЊС‚СЂ*/
 .template-filter {
   width: 260px;
 }
@@ -1077,7 +1077,7 @@ a.cart::before {
   color: #000000;
 }
 
-/* каталог*/
+/* РєР°С‚Р°Р»РѕРі*/
 .templates {
   width: 760px;
 }
@@ -1112,7 +1112,7 @@ a.cart::before {
   color: #666666;
 }
 
-/* постраничная навигация*/
+/* РїРѕСЃС‚СЂР°РЅРёС‡РЅР°СЏ РЅР°РІРёРіР°С†РёСЏ*/
 .pagination-item a {
   line-height: 18px;
   font-weight: 500;
@@ -1161,11 +1161,11 @@ input[type="radio"].visually-hidden {
   color: #000000;
   background-color: #ffffff;
 }
-/* Здесь будут стили для внутренней страницы */
+/* Р—РґРµСЃСЊ Р±СѓРґСѓС‚ СЃС‚РёР»Рё РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРµР№ СЃС‚СЂР°РЅРёС†С‹ */
 .inner-page {
 }
 
-/* Служебные стили*/
+/* РЎР»СѓР¶РµР±РЅС‹Рµ СЃС‚РёР»Рё*/
 img {
   max-width: 100%;
   height: auto;
@@ -1181,7 +1181,7 @@ a { text-decoration: none; }
   list-style: none;
 }
 
-/* Общие стили для кнопок*/
+/* РћР±С‰РёРµ СЃС‚РёР»Рё РґР»СЏ РєРЅРѕРїРѕРє*/
 .button {
   text-align: center;
   vertical-align: middle;
@@ -1202,24 +1202,24 @@ a { text-decoration: none; }
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* Блок центровщик*/
+/* Р‘Р»РѕРє С†РµРЅС‚СЂРѕРІС‰РёРє*/
 .container {
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Шапка сайта */
+/* РЁР°РїРєР° СЃР°Р№С‚Р° */
 .main-header {
   display: flex;
   flex-direction: column;
   margin-bottom: 82px;
-  /* Временно для сетки */
+  /* Р’СЂРµРјРµРЅРЅРѕ РґР»СЏ СЃРµС‚РєРё */
   min-height: 545px;
   background-color: #eeeeee;
 }
 
-/* отобразили блоки навигации (логотип, меню и корзину) в ряд*/
+/* РѕС‚РѕР±СЂР°Р·РёР»Рё Р±Р»РѕРєРё РЅР°РІРёРіР°С†РёРё (Р»РѕРіРѕС‚РёРї, РјРµРЅСЋ Рё РєРѕСЂР·РёРЅСѓ) РІ СЂСЏРґ*/
 .main-navigation {
   display: flex;
   justify-content: space-between;
@@ -1232,7 +1232,7 @@ a { text-decoration: none; }
 .main-header-logo {
   width: 160px;
   height: 65px;
-  /* временно для сетки */ 
+  /* РІСЂРµРјРµРЅРЅРѕ РґР»СЏ СЃРµС‚РєРё */ 
   display: block;
 }
 
@@ -1246,8 +1246,8 @@ a { text-decoration: none; }
 }
 
 /* 
-  Добавили обертку для навигации сайта 
-  и корзины для выравнивания по вертикали
+  Р”РѕР±Р°РІРёР»Рё РѕР±РµСЂС‚РєСѓ РґР»СЏ РЅР°РІРёРіР°С†РёРё СЃР°Р№С‚Р° 
+  Рё РєРѕСЂР·РёРЅС‹ РґР»СЏ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ РїРѕ РІРµСЂС‚РёРєР°Р»Рё
 */
 .main-navigation-wrapper {
   display: flex;
@@ -1258,7 +1258,7 @@ a { text-decoration: none; }
   min-height: 37px;
 }
 
-/* установили ширину из шаблона и запихали в эту ширину список из пунктов меню*/
+/* СѓСЃС‚Р°РЅРѕРІРёР»Рё С€РёСЂРёРЅСѓ РёР· С€Р°Р±Р»РѕРЅР° Рё Р·Р°РїРёС…Р°Р»Рё РІ СЌС‚Сѓ С€РёСЂРёРЅСѓ СЃРїРёСЃРѕРє РёР· РїСѓРЅРєС‚РѕРІ РјРµРЅСЋ*/
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -1270,21 +1270,21 @@ a { text-decoration: none; }
 }
 
 /* 
-    отобразили элементы списока меню в ряд,
-    добавили отступ слева для элементов
+    РѕС‚РѕР±СЂР°Р·РёР»Рё СЌР»РµРјРµРЅС‚С‹ СЃРїРёСЃРѕРєР° РјРµРЅСЋ РІ СЂСЏРґ,
+    РґРѕР±Р°РІРёР»Рё РѕС‚СЃС‚СѓРї СЃР»РµРІР° РґР»СЏ СЌР»РµРјРµРЅС‚РѕРІ
 */
 .site-navigation li {
   margin-left:  45px;
   height: 38px;
   text-align: left;
 }
-/* Уберем отступ у 1 и каждого 5-го элемента */
+/* РЈР±РµСЂРµРј РѕС‚СЃС‚СѓРї Сѓ 1 Рё РєР°Р¶РґРѕРіРѕ 5-РіРѕ СЌР»РµРјРµРЅС‚Р° */
 .site-navigation li:nth-of-type(4n+1) {
   margin-left: 0;
 }
 
-/* состояния для ссылок в меню*/
-/* покой*/
+/* СЃРѕСЃС‚РѕСЏРЅРёСЏ РґР»СЏ СЃСЃС‹Р»РѕРє РІ РјРµРЅСЋ*/
+/* РїРѕРєРѕР№*/
 .site-navigation a,
 a.cart {
   padding-bottom: 10px;
@@ -1295,13 +1295,13 @@ a.cart {
   border-bottom: 2px solid transparent;
 }
 
-/* наведение*/
+/* РЅР°РІРµРґРµРЅРёРµ*/
 .site-navigation a:hover,
 a.cart:hover {
   color: #fb565a;
 }
 
-/* нажатие*/
+/* РЅР°Р¶Р°С‚РёРµ*/
 .site-navigation a:active,
 .site-navigation a:focus, 
 a.cart:active,
@@ -1309,13 +1309,13 @@ a.cart:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* активный, находимся на странице */
+/* Р°РєС‚РёРІРЅС‹Р№, РЅР°С…РѕРґРёРјСЃСЏ РЅР° СЃС‚СЂР°РЅРёС†Рµ */
 .site-navigation a.active,
 a.cart.active {
   border-color: #fb565a;
 }
 
-/*Стилизация для ссылки на корзину*/
+/*РЎС‚РёР»РёР·Р°С†РёСЏ РґР»СЏ СЃСЃС‹Р»РєРё РЅР° РєРѕСЂР·РёРЅСѓ*/
 a.cart {
   position: relative;
 }
@@ -1331,23 +1331,23 @@ a.cart::before {
 }
 
 
-/* Слайдер в шапке*/
+/* РЎР»Р°Р№РґРµСЂ РІ С€Р°РїРєРµ*/
 
 .slider {
   display: flex;
-  /* серый фон блока с меню и слайдера*/
+  /* СЃРµСЂС‹Р№ С„РѕРЅ Р±Р»РѕРєР° СЃ РјРµРЅСЋ Рё СЃР»Р°Р№РґРµСЂР°*/
   background-color: #eeeeee;
 }
 
 .slide {
-  /* растянули на всю ширину контейнера*/
+  /* СЂР°СЃС‚СЏРЅСѓР»Рё РЅР° РІСЃСЋ С€РёСЂРёРЅСѓ РєРѕРЅС‚РµР№РЅРµСЂР°*/
   width: 100%;
   /*padding-bottom:79px;*/
   min-height: 430px;
 }
 
 .slide:nth-of-type(1) {
- /* запихали картинку в правый верхний угол - 100% 0%*/
+ /* Р·Р°РїРёС…Р°Р»Рё РєР°СЂС‚РёРЅРєСѓ РІ РїСЂР°РІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР» - 100% 0%*/
   background: url("../img/nerds-index-slide1.png") no-repeat 100% 0%;
 }
 
@@ -1367,7 +1367,7 @@ a.cart::before {
   font-weight: 500;  
   margin-top: 73px; 
   margin-bottom: 26px; 
-  display: inline-block;  /*чтобы можно было изменять ширину*/
+  display: inline-block;  /*С‡С‚РѕР±С‹ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РёР·РјРµРЅСЏС‚СЊ С€РёСЂРёРЅСѓ*/
   width: 380px;
 }
 
@@ -1396,9 +1396,9 @@ a.cart::before {
 
 
 
-/* Основное содержимое */
+/* РћСЃРЅРѕРІРЅРѕРµ СЃРѕРґРµСЂР¶РёРјРѕРµ */
 
-/* Раздел Услуги */
+/* Р Р°Р·РґРµР» РЈСЃР»СѓРіРё */
 .services {
   margin-bottom: 80px;
 }
@@ -1418,7 +1418,7 @@ a.cart::before {
   min-height: 178px;
 }
 
-/* заголовки в наименованиях всех услуг */
+/* Р·Р°РіРѕР»РѕРІРєРё РІ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏС… РІСЃРµС… СѓСЃР»СѓРі */
 .services h3 {
   font-size: 24px;
   line-height: 30px;
@@ -1429,7 +1429,7 @@ a.cart::before {
 }
 
 
-/* параметры шрифта в текстовом блоке для всех услуг */
+/* РїР°СЂР°РјРµС‚СЂС‹ С€СЂРёС„С‚Р° РІ С‚РµРєСЃС‚РѕРІРѕРј Р±Р»РѕРєРµ РґР»СЏ РІСЃРµС… СѓСЃР»СѓРі */
 .services p {
   font-size: 16px;
   line-height: 24px;
@@ -1437,7 +1437,7 @@ a.cart::before {
   margin-bottom:32px;  
 }
 
-/* блок правил для заказа сайта */
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° СЃР°Р№С‚Р° */
 .service-site {
   background-image: url("../img/illustration-1.jpg");
   background-repeat: no-repeat;
@@ -1459,7 +1459,7 @@ a.cart::before {
   background-color: #d7373b;
 }
 
-/* блок правил для заказа приложения*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° РїСЂРёР»РѕР¶РµРЅРёСЏ*/
 .service-application {
   background-image: url("../img/illustration-2.jpg"); 
   background-repeat: no-repeat;
@@ -1477,7 +1477,7 @@ a.cart::before {
   background-color: #00aa62;
 }
 
-/* блок правил для заказа презентации*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ Р·Р°РєР°Р·Р° РїСЂРµР·РµРЅС‚Р°С†РёРё*/
 .service-presentation {
   background-image: url("../img/illustration-3.jpg"); 
   background-repeat: no-repeat;
@@ -1495,7 +1495,7 @@ a.cart::before {
   background-color: #e5a722;
 }
 
-/* Секция "О нас" */
+/* РЎРµРєС†РёСЏ "Рћ РЅР°СЃ" */
 .studio {
   display: flex;
   justify-content: space-between;
@@ -1504,7 +1504,7 @@ a.cart::before {
   border-top: 2px solid #eeeeee;
 }
 
-/* блок правил раздела Студия*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» СЂР°Р·РґРµР»Р° РЎС‚СѓРґРёСЏ*/
 .studio-left {
   width: 760px;
 }
@@ -1571,7 +1571,7 @@ a.cart::before {
 }
 
 
-/* Секция "Партнеры"*/
+/* РЎРµРєС†РёСЏ "РџР°СЂС‚РЅРµСЂС‹"*/
 .partners {
   min-height: 180px;
   margin-bottom: 72px;
@@ -1586,7 +1586,7 @@ a.cart::before {
   align-items: stretch;
 }
 
-/*Состояния для изображений логотипов партнёров*/
+/*РЎРѕСЃС‚РѕСЏРЅРёСЏ РґР»СЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ Р»РѕРіРѕС‚РёРїРѕРІ РїР°СЂС‚РЅС‘СЂРѕРІ*/
 .partners-logo img {
   opacity: 0.3;
 }
@@ -1599,7 +1599,7 @@ a.cart::before {
   opacity: 0.1;
 }
 
-/* Подвал сайта*/
+/* РџРѕРґРІР°Р» СЃР°Р№С‚Р°*/
 .main-footer {
 }
 
@@ -1640,7 +1640,7 @@ a.cart::before {
   box-sizing: border-box;
 }
 
-/* блок правил для футера*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ С„СѓС‚РµСЂР°*/
 .contacts b {
   font-size: 18px;
   line-height: 30px;
@@ -1682,7 +1682,7 @@ a.cart::before {
 }
 
 
-/* блок правил для соц.сетей*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ СЃРѕС†.СЃРµС‚РµР№*/
 .social-list {
   display: flex;
   justify-content: space-between;
@@ -1733,7 +1733,7 @@ a.cart::before {
 }
 
 
-/* блок правил для модального окна*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ РјРѕРґР°Р»СЊРЅРѕРіРѕ РѕРєРЅР°*/
 .modal-write-us {
   display:none;
   position: fixed;
@@ -1749,12 +1749,12 @@ a.cart::before {
   margin: 0 auto;	
   box-sizing:border-box;
   
-  /* не забыть убрать границы*/
+  /* РЅРµ Р·Р°Р±С‹С‚СЊ СѓР±СЂР°С‚СЊ РіСЂР°РЅРёС†С‹*/
   outline: 1px solid #666;
   z-index:3;
 }
 
-/* блок для кнопки закрыть*/
+/* Р±Р»РѕРє РґР»СЏ РєРЅРѕРїРєРё Р·Р°РєСЂС‹С‚СЊ*/
 .btn-close {
   position: absolute;
   top: 75px;
@@ -1767,7 +1767,7 @@ a.cart::before {
   cursor: pointer;
 }
 
-/* Нарисовали крестик*/
+/* РќР°СЂРёСЃРѕРІР°Р»Рё РєСЂРµСЃС‚РёРє*/
 .btn-close::before,
 .btn-close::after {
   content: "";
@@ -1886,7 +1886,7 @@ a.cart::before {
 }
 
 
-/* блок правил для внутренней  страницы*/
+/* Р±Р»РѕРє РїСЂР°РІРёР» РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРµР№  СЃС‚СЂР°РЅРёС†С‹*/
 .inner-page .main-header {
   min-height: 355px;
 }
@@ -1894,7 +1894,7 @@ a.cart::before {
 .inner-page .main-navigation { 
   margin-bottom: 75px; 
 }
-/*Заголовок h1 отображается только на внутренней странице */
+/*Р—Р°РіРѕР»РѕРІРѕРє h1 РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РЅР° РІРЅСѓС‚СЂРµРЅРЅРµР№ СЃС‚СЂР°РЅРёС†Рµ */
 .title {
   margin-top: 0;
   text-align: center;
@@ -1903,7 +1903,7 @@ a.cart::before {
   font-weight: 500;
 }
 
-/*Блок формы Стоимость*/
+/*Р‘Р»РѕРє С„РѕСЂРјС‹ РЎС‚РѕРёРјРѕСЃС‚СЊ*/
 .filter-item {
   margin: 0;
   padding: 0;
@@ -1994,7 +1994,7 @@ a.cart::before {
   text-align: right;
 }
 
-/*блок Сетки*/
+/*Р±Р»РѕРє РЎРµС‚РєРё*/
 .list-layout li {
   padding-bottom: 10px;	
 }
@@ -2029,10 +2029,10 @@ a.cart::before {
   height: 25px;
 }
 
-/* не получается прописать состояния наведения*/
+/* РЅРµ РїРѕР»СѓС‡Р°РµС‚СЃСЏ РїСЂРѕРїРёСЃР°С‚СЊ СЃРѕСЃС‚РѕСЏРЅРёСЏ РЅР°РІРµРґРµРЅРёСЏ*/
 
 
-/*блок для особенностей*/
+/*Р±Р»РѕРє РґР»СЏ РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№*/
 .list-features li {
   padding-bottom: 10px;	
 }
@@ -2078,7 +2078,7 @@ a.cart::before {
   justify-content: space-between;
 }
 
-/* Фильтр*/
+/* Р¤РёР»СЊС‚СЂ*/
 .template-filter {
   width: 260px;
 }
@@ -2148,7 +2148,7 @@ a.cart::before {
   color: #000000;
 }
 
-/* каталог*/
+/* РєР°С‚Р°Р»РѕРі*/
 .templates {
   width: 760px;
 }
@@ -2183,7 +2183,7 @@ a.cart::before {
   color: #666666;
 }
 
-/* постраничная навигация*/
+/* РїРѕСЃС‚СЂР°РЅРёС‡РЅР°СЏ РЅР°РІРёРіР°С†РёСЏ*/
 .pagination-item a {
   line-height: 18px;
   font-weight: 500;
