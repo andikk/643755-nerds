@@ -53,8 +53,6 @@ a {
   display: flex;
   flex-direction: column;
   margin-bottom: 82px;
-  /* Временно для сетки */
-  min-height: 545px;
   background-color: #eeeeee;
 }
 
@@ -530,33 +528,19 @@ a.cart::before {
 
 /* Подвал сайта*/
 
+.main-footer {
+position:relative;
+}
 
 .footer-map {
   margin-top:0px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 70px;
-  width: 1440px;
-  min-height: 415px;
 }
-
-.footer-map .container {
-  position:relative;
-}
-
-.footer-social {
-  display: flex;
-  padding: 70px 0;
-  margin-bottom: 70px;
-  min-height: 80px;
-}
-
-
 
 .contacts {
   position: absolute;
   top: 54px;
-  left:20px;
+  left: 20px;
   z-index: 1;
   padding: 50px;
   width: 318px;
@@ -564,7 +548,7 @@ a.cart::before {
   box-sizing: border-box;
 }
 
-/* блок правил для футера*/
+
 .contacts b {
   font-size: 18px;
   line-height: 30px;
@@ -575,8 +559,8 @@ a.cart::before {
 }
 
 .addres {
-  padding-bottom: 21px;
   font:inherit;
+  padding-bottom: 21px;
 }
 
 .addres p {
@@ -608,6 +592,13 @@ a.cart::before {
 
 
 /* блок правил для соц.сетей*/
+.footer-social {
+  display: flex;
+  padding: 70px 0;
+  margin-bottom: 70px;
+}
+
+
 .social-list {
   display: flex;
   justify-content: space-between;
@@ -1597,19 +1588,7 @@ a.cart::before {
 }
 
 /* Подвал сайта*/
-.main-footer {
-}
-
-.footer-map {
-  margin-top:0px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 70px;
-  width: 1440px;
-  min-height: 415px;
- 	
-}
-
+	
 .footer-map .container {
   position:relative;
 }
