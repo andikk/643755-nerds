@@ -36,6 +36,1152 @@ a { text-decoration: none; }
 }
 
 /* Общие стили для кнопок*/
+
+
+
+
+/* Блок центровщик*/
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Шапка сайта */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 82px;
+  /* Временно для сетки */
+  min-height: 545px;
+  background-color: #eeeeee;
+}
+
+/* отобразили блоки навигации (логотип, меню и корзину) в ряд*/
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+  min-height: 70px;
+  background-color: #eeeeee;
+}
+
+.main-header-logo {
+  width: 160px;
+  height: 65px;
+  /* временно для сетки */ 
+  display: block;
+}
+
+.main-header-logo:hover img,
+.main-header-logo:focus img {
+  opacity: 0.8;
+}
+
+.main-header-logo:active img {
+  opacity: 0.3;
+}
+
+/* 
+  Добавили обертку для навигации сайта 
+  и корзины для выравнивания по вертикали
+*/
+.main-navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 26px;
+  width: 800px;
+  min-height: 37px;
+}
+
+/* установили ширину из шаблона и запихали в эту ширину список из пунктов меню*/
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding:0;
+  margin: 0;
+  width: 440px;
+  text-align: center;
+}
+
+/* 
+    отобразили элементы списока меню в ряд,
+    добавили отступ слева для элементов
+*/
+.site-navigation li {
+  margin-left:  45px;
+  height: 38px;
+  text-align: left;
+}
+/* Уберем отступ у 1 и каждого 5-го элемента */
+.site-navigation li:nth-of-type(4n+1) {
+  margin-left: 0;
+}
+
+/* состояния для ссылок в меню*/
+/* покой*/
+.site-navigation a,
+a.cart {
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #000000;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+
+/* наведение*/
+.site-navigation a:hover,
+a.cart:hover {
+  color: #fb565a;
+}
+
+/* нажатие*/
+.site-navigation a:active,
+.site-navigation a:focus, 
+a.cart:active,
+a.cart:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* активный, находимся на странице */
+.site-navigation a.active,
+a.cart.active {
+  border-color: #fb565a;
+}
+
+/*Стилизация для ссылки на корзину*/
+a.cart {
+  position: relative;
+}
+
+a.cart::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: url("../img/cart-icon.svg") no-repeat;
+  top: 7px;
+  left:-40px;
+}
+
+
+/* Слайдер в шапке*/
+
+
+.slider {
+  position: relative;
+  
+  background-color: #eeeeee;
+}
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+  
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+  
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+  
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+  
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  
+  width: 18px;
+  height: 18px;
+  
+  background: #ffffff;
+  
+  border-radius: 50%;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.slider-item {
+  display: none;
+  padding: 78px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+  background-image: url("../img/nerds-index-slide1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
+}
+
+.slider-item:nth-child(2) {
+  background-image: url("../img/nerds-index-slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slider-item:nth-child(3) {
+  background-image: url("../img/nerds-index-slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+  display: block;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+
+.slider-item h3 {
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 27px;
+  
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.slider-item p {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.button {
+  display: block;
+  width: 240px;
+  padding: 13px 0;
+  
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  
+  background-color: #fb565a;
+  border-radius: 3px;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e74246;
+}
+
+.button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+
+
+
+/* Основное содержимое */
+
+/* Раздел Услуги */
+.services {
+  margin-bottom: 80px;
+}
+
+.services-list {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width:1105px;
+}
+
+.service-site,
+.service-application, 
+.service-presentation {
+  padding-top: 150px;
+  width: 305px;
+  min-height: 178px;
+}
+
+/* заголовки в наименованиях всех услуг */
+.services h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top:19px;
+  margin-bottom:0px;
+}
+
+
+/* параметры шрифта в текстовом блоке для всех услуг */
+.services p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400; 
+  margin-bottom:32px;  
+}
+
+/* блок правил для заказа сайта */
+.service-site {
+  background-image: url("../img/illustration-1.jpg");
+  background-repeat: no-repeat;
+}
+
+.btn-order {
+  padding: 16px 40px;
+}
+
+.order-site-button {
+  background-color: #fb565a;
+}
+
+.order-site-button:hover {
+  background-color: #e74246;
+}
+
+.order-site-button:active{
+  background-color: #d7373b;
+}
+
+/* блок правил для заказа приложения*/
+.service-application {
+  background-image: url("../img/illustration-2.jpg"); 
+  background-repeat: no-repeat;
+}
+
+.order-application-button {
+  background-color: #00ca74;
+}
+
+.order-application-button:hover {
+  background-color: #00bc6c;
+}
+
+.order-application-button:active{
+  background-color: #00aa62;
+}
+
+/* блок правил для заказа презентации*/
+.service-presentation {
+  background-image: url("../img/illustration-3.jpg"); 
+  background-repeat: no-repeat;
+}
+
+.order-presentation-button {
+  background-color: #efc84a;
+}
+
+.order-presentation-button:hover {
+  background-color: #eab534;
+}
+
+.order-presentation-button:active{
+  background-color: #e5a722;
+}
+
+/* Секция "О нас" */
+.studio {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding-top: 42px;
+  border-top: 2px solid #eeeeee;
+}
+
+/* блок правил раздела Студия*/
+.studio-left {
+  width: 760px;
+}
+
+.studio-left b {
+  font-size: 45px;
+  line-height: 47px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.studio-left p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.studio-left h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+   margin-bottom: 23px;
+}
+
+.studio-left li {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.studio-right {
+  padding-top: 242px;
+  margin-left: 83px;
+  width: 380px;
+  background-image: url("../img/nerds-illustration.jpg");
+  background-repeat: no-repeat;
+}
+
+
+.studio-table caption {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700; 
+  text-transform: uppercase;
+  margin-bottom: 33px;
+}
+
+.stydio-table-percent > td {
+  font-size: 45px;
+  line-height: 54px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.stydio-table-percent tr {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;     
+}
+
+
+/* Секция "Партнеры"*/
+.partners {
+  min-height: 180px;
+  margin-bottom: 72px;
+  border-style: solid;
+  border-width: 2px 0;
+  border-color: #eeeeee;
+}
+
+.partners-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/*Состояния для изображений логотипов партнёров*/
+.partners-logo img {
+  opacity: 0.3;
+}
+
+ .partners-logo img:hover {
+  opacity: 1;
+}
+
+.partners-logo img:active {
+  opacity: 0.1;
+}
+
+/* Подвал сайта*/
+.main-footer {
+}
+
+.footer-map {
+  margin-top:0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  width: 1440px;
+  min-height: 415px;
+ 	
+}
+
+.footer-map .container {
+  position:relative;
+}
+
+.footer-social {
+  display: flex;
+  padding: 70px 0;
+  margin-bottom: 70px;
+  min-height: 80px;
+}
+
+.social-list {
+  width: 280px;
+  min-height: 100px;
+}
+
+.contacts {
+  position: absolute;
+  top: 54px;
+  left:20px;
+  z-index: 1;
+  padding: 50px;
+  width: 318px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* блок правил для футера*/
+.contacts b {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;	
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.addres {
+  padding-bottom: 21px;
+}
+
+.addres p {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;			
+}
+
+.write-button {
+  margin-top: 17px;
+  margin-bottom: 47px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  background-color: #fb565a;
+  color: #ffffff;
+  width:220px;
+}
+
+.write-button:hover {
+  background-color: #e74246;
+  color: #ffffff;
+}
+
+.write-button:active {
+  background-color: #d7373b;
+  color: #e48789;
+}
+
+
+/* блок правил для соц.сетей*/
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin: 0;
+  margin-right: 140px;
+  padding: 0;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78px;
+  height: 78px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+
+.social-button:hover {
+  background-color: #e74246;
+}
+
+.social-button:focus {
+  background-color: #d7373b;
+  fill-opacity: 0.3;
+}
+
+.social-text {
+  padding-top: 6px;
+}
+
+.social-text b {
+  display: inline-block;
+  margin-bottom: 11px;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.social-text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+  font-weight: 400;
+}
+
+
+/* блок правил для модального окна*/
+.modal-write-us {
+  display:none;
+  position: fixed;
+  padding-left:100px;
+  padding-right:100px;
+  padding-top:65px;
+  padding-bottom:80px;
+  background:white;
+  width:960px;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;	
+  box-sizing:border-box;
+  
+  /* не забыть убрать границы*/
+  outline: 1px solid #666;
+  z-index:3;
+}
+
+/* блок для кнопки закрыть*/
+.btn-close {
+  position: absolute;
+  top: 75px;
+  right: 90px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  border: 0;
+  background-color:white;
+  cursor: pointer;
+}
+
+/* Нарисовали крестик*/
+.btn-close::before,
+.btn-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #fecccd;
+}
+
+.btn-close::before {
+  transform: rotate(45deg);
+}
+
+.btn-close::after {
+  transform: rotate(-45deg);
+}
+
+.name-email {
+ display:flex;
+}
+
+.modal-write-us h2 {
+  font-size: 45px;
+  line-height: 50.4px;
+  font-weight: 500;	
+  margin: 0;
+  margin-bottom:47px;
+}
+
+.modal-write-us label {
+  display:flex;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-bottom:10px;
+}
+
+
+.lbl-email {
+  margin-left:40px;	
+}
+
+.modal-write-us input[type="text"],
+.modal-write-us input[type="email"],
+.modal-write-us textarea {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: #b1b1b1;
+  background-color: #ffffff;
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+
+.modal-write-us input[type="email"] {
+  margin-left:40px;	
+}
+
+.modal-write-us input[type="text"],
+.modal-write-us input[type="email"] {
+  width:360px;
+}
+
+.modal-write-us textarea {
+  width:760px;
+}
+
+.modal-write-us input[type="text"]:hover,
+.modal-write-us input[type="email"]:hover,
+.modal-write-us textarea:hover {
+  border-color: #b4b9bb;
+}
+
+.modal-write-us input[type="text"]:focus,
+.modal-write-us input[type="email"]:focus,
+.modal-write-us textarea:focus {
+  color: #444444;
+  border-color: #000000;
+}
+
+.modal-write-us input[type="text"]:invalid,
+.modal-write-us input[type="email"]:invalid, {
+  color: #e74246;
+  border-color: #e74246;
+}
+
+.modal-write-us input[type="submit"] {
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  display: table-cell;
+  color: #ffffff;
+  background-color: #fb565a;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.modal-write-us input[type="submit"]:hover {
+  background-color: #e74246;
+  color: #ffffff;
+}
+
+.modal-write-us input[type="submit"]:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* блок правил для внутренней  страницы*/
+.inner-page .main-header {
+  min-height: 355px;
+}
+
+.inner-page .main-navigation { 
+  margin-bottom: 75px; 
+}
+/*Заголовок h1 отображается только на внутренней странице */
+.title {
+  margin-top: 0;
+  text-align: center;
+  font-size: 55px;
+  line-height: 66x;
+  font-weight: 500;
+}
+
+/*Блок формы Стоимость*/
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  font:inherit;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
+/*блок Сетки*/
+.list-layout li {
+  padding-bottom: 10px;	
+}
+
+.radio-control {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.radio-control:hover,
+.radio-control:focus {
+  color: #4d4d4d;
+}
+
+
+.radio-control input[type="radio"] + .radio-control-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/radio-off.svg"); 
+  width: 25px;
+  height: 25px;
+}
+
+.radio-control input[type="radio"]:checked + .radio-control-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/radio-on.svg"); 
+  width: 25px;
+  height: 25px;
+}
+
+/* не получается прописать состояния наведения*/
+
+
+/*блок для особенностей*/
+.list-features li {
+  padding-bottom: 10px;	
+}
+
+.checkbox-control {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+
+.checkbox-control:hover,
+.checkbox-control:focus {
+  color: #4d4d4d;
+}
+
+
+.checkbox-control input[type="checkbox"] + .checkbox-control-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/checkbox-off.svg"); 
+  background-repeat:no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.checkbox-control input[type="checkbox"]:checked + .checkbox-control-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/checkbox-on.svg"); 
+  background-repeat:no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Фильтр*/
+.template-filter {
+  width: 260px;
+}
+
+.template-filter fieldset,
+.template-filter input {
+  border: none;
+}
+
+.template-filter input {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.fieldset-price input {
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #eeeeee;
+}
+
+.template-filter legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.fieldset-type .fieldset-features label {
+  font-size: 16px;
+  line-height: 20px;	
+}
+
+.button-show {
+  color: #ffffff;
+  background-color: fb565a;
+}
+
+.button-show:hover {
+  background-color: #e74246;
+}
+
+.button-show:active {
+  background-color: #d7373b;
+  color: #e48789;
+}
+
+.sort {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 360px;
+}
+
+.sort a {
+  font-size: 14px;
+  line-height: 18px;
+  color: cacaca;
+  text-transform: uppercase;
+}
+
+.sort .current {
+  color: #000000;
+}
+
+/* каталог*/
+.templates {
+  width: 760px;
+}
+
+.templates-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.catalog-item {
+  margin-bottom: 35px;
+  width: 360px;
+  min-height: 230px;
+}
+
+.selected-item .catalog-item-text {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.catalog-item .templates-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.catalog-item p {
+  line-height: 18px;
+  color: #666666;
+}
+
+/* постраничная навигация*/
+.pagination-item a {
+  line-height: 18px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.pagination-item-current {
+  background-color: #ffffff;
+  border: 2px solid #dbdbdb;
+}
+
+.pagination-list li:hover,
+.pagination-list li:focus {
+  background-color: #dfdfdf;
+  border: none;
+}
+
+.pagination-list li:active {
+  background-color: #d5d5d5;
+  border: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+  padding: 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+/* Здесь будут стили для внутренней страницы */
+.inner-page {
+}
+
+/* Служебные стили*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a { text-decoration: none; }
+
+.text-uppercase { text-transform: uppercase; }
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Общие стили для кнопок*/
 .button {
   text-align: center;
   vertical-align: middle;
@@ -186,6 +1332,7 @@ a.cart::before {
 
 
 /* Слайдер в шапке*/
+
 .slider {
   display: flex;
   /* серый фон блока с меню и слайдера*/
@@ -245,6 +1392,9 @@ a.cart::before {
 .slider-button:focus, {
   background-color: #d7373b;
 }
+
+
+
 
 /* Основное содержимое */
 
