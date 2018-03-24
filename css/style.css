@@ -291,21 +291,23 @@ a.cart::before {
   margin-bottom: 38px;
 }
 
+
+
 .button {
-  display: block;
-  width: 240px;
-  padding: 13px 0;
-  
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  display: table-cell;
+  color: #ffffff;
+  background-color: #fb565a;
   font-size: 16px;
   line-height: 18px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  
-  background-color: #fb565a;
+  font-weight: 500;
+  padding: 16px 53px;
   border-radius: 3px;
-  border: none;
+  cursor: pointer;
+  
 }
 
 .button:hover,
@@ -527,8 +529,7 @@ a.cart::before {
 }
 
 /* Подвал сайта*/
-.main-footer {
-}
+
 
 .footer-map {
   margin-top:0px;
@@ -537,7 +538,6 @@ a.cart::before {
   margin-bottom: 70px;
   width: 1440px;
   min-height: 415px;
- 	
 }
 
 .footer-map .container {
@@ -551,10 +551,7 @@ a.cart::before {
   min-height: 80px;
 }
 
-.social-list {
-  width: 280px;
-  min-height: 100px;
-}
+
 
 .contacts {
   position: absolute;
@@ -579,6 +576,7 @@ a.cart::before {
 
 .addres {
   padding-bottom: 21px;
+  font:inherit;
 }
 
 .addres p {
@@ -618,6 +616,7 @@ a.cart::before {
   margin-right: 140px;
   padding: 0;
 }
+
 
 .social-button {
   display: flex;
