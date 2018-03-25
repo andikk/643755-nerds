@@ -950,7 +950,7 @@ a.cart::before {
   height: 25px;
 }
 
-/* не получается прописать состояния наведения*/
+/* не получается прописать состояния наведения радио-буттонов*/
 
 
 /*блок для особенностей*/
@@ -991,48 +991,10 @@ a.cart::before {
   height: 30px;
 }
 
+/* не получается прописать состояния наведения чек-боксов*/
 
 
-
-.catalog {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Фильтр*/
-.template-filter {
-  width: 260px;
-}
-
-.template-filter fieldset,
-.template-filter input {
-  border: none;
-}
-
-.template-filter input {
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.fieldset-price input {
-  font-size: 16px;
-  line-height: 22px;
-  background-color: #eeeeee;
-}
-
-.template-filter legend {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.fieldset-type .fieldset-features label {
-  font-size: 16px;
-  line-height: 20px;	
-}
-
+/* состояния кнопки показать*/
 .button-show {
   color: #ffffff;
   background-color: fb565a;
@@ -1047,6 +1009,9 @@ a.cart::before {
   color: #e48789;
 }
 
+
+
+/* панель сортировки*/
 .sort {
   display: flex;
   justify-content: space-between;
@@ -1056,6 +1021,13 @@ a.cart::before {
   display: flex;
   flex-wrap: wrap;
   width: 360px;
+}
+
+.sort b {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .sort a {
@@ -1070,6 +1042,12 @@ a.cart::before {
 }
 
 /* каталог*/
+.catalog {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .templates {
   width: 760px;
 }
