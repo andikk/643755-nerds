@@ -52,7 +52,6 @@ a {
 .main-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 82px;
   background-color: #eeeeee;
 }
 
@@ -170,6 +169,8 @@ a.cart::before {
 /* Слайдер в шапке*/
 .slider {
   position: relative;
+  margin-bottom: 82px;
+  min-width: 1200px;
   background-color: #eeeeee;
 }
 
@@ -467,6 +468,20 @@ a.cart::before {
   margin-bottom: 24px;
 }
 
+.studio-left li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+  vertical-align: middle;
+}
+
+.studio-left-text {
+  max-width: 665px;
+}
+
 .studio-right {
   padding-top: 242px;
   margin-left: 83px;
@@ -475,7 +490,9 @@ a.cart::before {
   background-repeat: no-repeat;
 }
 
-
+.studio-table {
+  width: 100%;
+}
 .studio-table caption {
   font-size: 16px;
   line-height: 24px;
@@ -484,17 +501,26 @@ a.cart::before {
   margin-bottom: 33px;
 }
 
-.stydio-table-percent > td {
-  font-size: 45px;
-  line-height: 54px;
-  font-weight: 700;
-  padding-bottom: 8px;
-}
-
-.stydio-table-percent tr {
+.studio-table td {
+  width: auto;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;     
+}
+
+.stydio-table-percent > td {
+  width: 33.3%;
+  height: 72px;
+  vertical-align: top;
+  font-size: 45px;
+  line-height: 1.4; 
+  font-weight: 500;
+}
+
+.studio-table-percent sup {
+  font-size: 24px;
+  line-height: 1;
+  vertical-align: super;
 }
 
 
@@ -529,18 +555,34 @@ a.cart::before {
 /* Подвал сайта*/
 
 .main-footer {
-  position:relative;
+  margin-top: 72px;
 }
 
 .footer-map {
-  margin-top:0px;
+  overflow-x: hidden; 
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 70px;
+  min-width: 1200px;
+  min-height: 415px;
+}
+
+.footer-map .container {
+  position: relative;
+}
+
+.footer-map .map {
+  display: block;
+  margin: 0 auto;
+  width: 1440px;
+  max-width: none;
+  height: auto;
 }
 
 .contacts {
   position: absolute;
-  top: 40px;
   left: 20px;
+  top: 55px;
   z-index: 1;
   padding-left: 50px;
   padding-right: 50px;
@@ -551,7 +593,6 @@ a.cart::before {
   box-sizing: border-box;
   
 }
-
 
 .contacts b {
   font-size: 18px;
@@ -568,14 +609,14 @@ a.cart::before {
 }
 
 .addres p {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;			
+  font-weight: 400;		
 }
 
 .write-button {
-  margin-top: 17px;
-  margin-bottom: 47px;
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -598,8 +639,8 @@ a.cart::before {
 /* блок правил для соц.сетей*/
 .footer-social {
   display: flex;
-  padding: 70px 0;
   margin-bottom: 70px;
+  min-height: 80px;
 }
 
 
@@ -656,23 +697,25 @@ a.cart::before {
 
 /* блок правил для модального окна*/
 .modal-write-us {
-  display:none;
+  display: none;
   position: fixed;
+  z-index: 20;
   padding-left:100px;
   padding-right:100px;
   padding-top:65px;
   padding-bottom:80px;
   background:white;
   width:960px;
-  top: 30px;
-  left: 0;
-  right: 0;
+  min-height: 590px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0 auto;	
   box-sizing:border-box;
   
   /* не забыть убрать границы*/
   outline: 1px solid #666;
-  z-index:3;
+
 }
 
 /* блок для кнопки закрыть*/
@@ -708,16 +751,27 @@ a.cart::before {
   transform: rotate(-45deg);
 }
 
-.name-email {
- display:flex;
-}
 
 .modal-write-us h2 {
   font-size: 45px;
   line-height: 50.4px;
-  font-weight: 500;	
+  font-weight: 500; 
   margin: 0;
-  margin-bottom:47px;
+  margin-bottom:35px;
+}
+
+.name-email {
+  display:flex;
+  margin-bottom: 35px;
+}
+
+.name-email p {
+  margin: 0;
+}
+
+.user-message {
+  margin-top: 0;
+  margin-bottom: 47px;
 }
 
 .modal-write-us label {
@@ -761,6 +815,7 @@ a.cart::before {
 
 .modal-write-us textarea {
   width:760px;
+  height: 120px;
 }
 
 .modal-write-us input[type="text"]:hover,
@@ -783,6 +838,8 @@ a.cart::before {
 }
 
 .modal-write-us input[type="submit"] {
+  box-sizing: border-box;
+  width: 265px;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
