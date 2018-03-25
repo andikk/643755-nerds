@@ -996,17 +996,18 @@ a.cart::before {
 
 /* состояния кнопки показать*/
 .button-show {
-  color: #ffffff;
-  background-color: fb565a;
+  color: #000000;
+  background-color: #eeeeee;
 }
 
 .button-show:hover {
-  background-color: #e74246;
+  background-color: #dfdfdf;
 }
 
+/* КНОПКА НЕ ТАК СЕБЯ ВЕДЁТ ПОСЛЕ НАЖАТИЯ */
 .button-show:active {
-  background-color: #d7373b;
-  color: #e48789;
+  background-color: #d5d5d5;
+  color: #d5d5d5;
 }
 
 
@@ -1019,7 +1020,7 @@ a.cart::before {
 
 .sort-list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   width: 360px;
 }
 
@@ -1030,16 +1031,39 @@ a.cart::before {
   font-weight: 700;
 }
 
-.sort a {
+.sort-list li {
   font-size: 14px;
   line-height: 18px;
   color: cacaca;
   text-transform: uppercase;
 }
 
-.sort .current {
+.sort-list .current {
   color: #000000;
 }
+
+
+.btn-down a {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+}
+
+
+.btn-up a {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/icon-up-dir.svg");
+  background-repeat: no-repeat;
+}
+
+
+
+
+
 
 /* каталог*/
 .catalog {
