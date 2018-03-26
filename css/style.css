@@ -1159,6 +1159,9 @@ a.cart::before {
   bottom: 0px;
   z-index: 1;
 }
+.catalog-item-details {
+text-align: center;
+}
 
 .catalog-item-details h3 {
   font-size: 18px;
@@ -1166,17 +1169,21 @@ a.cart::before {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
-  text-align: center;
+ 
 }
 
 
 .catalog-item-details p {
   line-height: 18px;
   color: #666666;
-  text-align: center;
+
 }
 
 
+.catalog-item-details .button {
+ display:inline-block;
+text-align: center;
+}
 
 .catalog-item:hover .catalog-item-details {
  display: block;
@@ -1185,43 +1192,55 @@ a.cart::before {
 
 
 
-
 /* постраничная навигация*/
-.pagination-list  {
+.pagination-list {
   display: flex;
 }
 
-.pagination-item  {
+.pagination-item {
+  margin-right: 10px;
+}
+
+.pagination-item a {
+  display: inline-block;
+  padding-top: 13px;
+  padding-left: 17px;
+  padding-bottom: 13px;
+  padding-right: 17px;
+
+  font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  color: #000000;
   text-transform: uppercase;
-  padding-left:15px;
-  padding-right:15px;
-  padding-top:10px;
-  padding-bottom:10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: #eeeeee
-  
+  color: #000000;
+
+  background-color: #eeeeee;
+  border: 3px solid #eeeeee;
+  border-radius: 3px;
 }
 
-.current-item {
+.pagination-item:last-child a {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.current-item a {
   background-color: #ffffff;
-  border: 2px solid #dbdbdb;
-  
 }
 
-.pagination-list li:hover,
-.pagination-list li:focus {
+.pagination-item a:hover,
+.pagination-item a:focus {
   background-color: #dfdfdf;
-  border: none;
+  border-color: #dfdfdf;
 }
 
-.pagination-list li:active {
+.pagination-item a:active {
+  color:  rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
-  border: none;
+  border-color: #d5d5d5;
+  border-top-color: #bfbfbf;
 }
+
 
 
 
