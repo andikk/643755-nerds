@@ -15,9 +15,7 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
-/* Здесь будут стили для внутренней страницы */
-.inner-page {
-}
+
 
 /* Служебные стили*/
 img {
@@ -309,10 +307,6 @@ a.cart::before {
   
 }
 
-.button:hover,
-.button:focus {
-  background-color: #e74246;
-}
 
 .button:active {
   background-color: #d7373b;
@@ -1064,7 +1058,7 @@ a.cart::before {
 /* КНОПКА НЕ ТАК СЕБЯ ВЕДЁТ ПОСЛЕ НАЖАТИЯ */
 .button-show:active {
   background-color: #d5d5d5;
-  color: #d5d5d5;
+  color: #a9a9a9;
 }
 
 
@@ -1158,10 +1152,10 @@ a.cart::before {
   position: absolute;
   bottom: 0px;
   z-index: 1;
+  text-align: center;
+  padding-bottom: 20px;
 }
-.catalog-item-details {
-text-align: center;
-}
+
 
 .catalog-item-details h3 {
   font-size: 18px;
@@ -1169,20 +1163,18 @@ text-align: center;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
- 
 }
 
 
 .catalog-item-details p {
   line-height: 18px;
   color: #666666;
-
 }
 
 
 .catalog-item-details .button {
- display:inline-block;
-text-align: center;
+  display:inline-block;
+  text-align: center;
 }
 
 .catalog-item:hover .catalog-item-details {
