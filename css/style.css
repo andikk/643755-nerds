@@ -866,7 +866,7 @@ a.cart::before {
 .inner-page .main-navigation { 
   margin-bottom: 75px; 
 }
-/*Заголовок h1 отображается только на внутренней странице */
+/*Заголовок отображается только на внутренней странице */
 .title {
   margin-top: 0;
   text-align: center;
@@ -990,6 +990,7 @@ a.cart::before {
   background-image: url("../img/radio-off.svg"); 
   width: 25px;
   height: 25px;
+  opacity: 0.4;
 }
 
 .radio-control input[type="radio"]:checked + .radio-control-indicator {
@@ -999,9 +1000,29 @@ a.cart::before {
   background-image: url("../img/radio-on.svg"); 
   width: 25px;
   height: 25px;
+  opacity: 0.4;
 }
 
-/* не получается прописать состояния наведения радио-буттонов*/
+.radio-control input[type="radio"]:disabled + .radio-control-indicator {
+  opacity: 0.1;
+}
+
+.radio-control input[type="radio"]:disabled:hover + .radio-control-indicator {
+  opacity: 0.3;
+}
+
+
+.radio-control input[type="radio"]:hover + .radio-control-indicator,
+.radio-control input[type="radio"]:focus + .radio-control-indicator {
+  opacity: 1;
+}
+
+.radio-control input[type="radio"]:checked:hover + .radio-control-indicator,
+.radio-control input[type="radio"]:checked:focus + .radio-control-indicator {
+  opacity: 1;
+}
+
+
 
 
 /*блок для особенностей*/
@@ -1030,6 +1051,7 @@ a.cart::before {
   background-repeat:no-repeat;
   width: 30px;
   height: 30px;
+  opacity: 0.4;
 }
 
 .checkbox-control input[type="checkbox"]:checked + .checkbox-control-indicator {
@@ -1040,9 +1062,30 @@ a.cart::before {
   background-repeat:no-repeat;
   width: 30px;
   height: 30px;
+  opacity: 0.4;
 }
 
-/* не получается прописать состояния наведения чек-боксов*/
+
+.checkbox-control input[type="checkbox"]:disabled + .checkbox-control-indicator {
+  opacity: 0.1;
+}
+
+.checkbox-control input[type="checkbox"]:disabled:hover + .checkbox-control-indicator {
+  opacity: 0.1;
+}
+
+
+
+.checkbox-control input[type="checkbox"]:hover + .checkbox-control-indicator,
+.checkbox-control input[type="checkbox"]:focus + .checkbox-control-indicator  {
+  opacity: 1;
+}
+
+.checkbox-control input[type="checkbox"]:checked:hover + .checkbox-control-indicator,
+.checkbox-control input[type="checkbox"]:checked:focus + .checkbox-control-indicator  {
+  opacity: 1;
+}
+
 
 
 /* состояния кнопки показать*/
@@ -1140,7 +1183,7 @@ a.cart::before {
   background-image: url("../img/browser.svg");
   background-repeat: no-repeat;
   background-position: top left;
-  z-index: 3;
+  z-index: 30;
 }
 
 
