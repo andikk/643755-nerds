@@ -585,7 +585,6 @@ a.cart::before {
   width: 318px;
   background-color: #ffffff;
   box-sizing: border-box;
-  
 }
 
 .contacts b {
@@ -706,10 +705,7 @@ a.cart::before {
   transform: translate(-50%, -50%);
   margin: 0 auto;	
   box-sizing:border-box;
-  
-  /* не забыть убрать границы*/
-  outline: 1px solid #666;
-
+  box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
 }
 
 /* блок для кнопки закрыть*/
@@ -869,7 +865,7 @@ a.cart::before {
 }
 /*Заголовок отображается только на внутренней странице */
 .title {
-  margin-top: 0;
+  margin-top: 15px;
   text-align: center;
   font-size: 55px;
   line-height: 66x;
@@ -894,20 +890,17 @@ a.cart::before {
 .range-filter {
   width: 260px;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .range-filter legend {
   margin-bottom: 50px;
 }
 
-
-
-
-
 .range-controls {
   position: relative;
   height: 41px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
@@ -951,6 +944,7 @@ a.cart::before {
 
 .price-controls {
   font-size: 0;
+      margin-bottom: 57px;
 }
 
 .price-controls label {
@@ -983,7 +977,8 @@ a.cart::before {
 }
 
 .list-layout li {
-  padding-bottom: 10px;	
+  padding-bottom: 3px;
+  padding-top: 14px;
 }
 
 .radio-control {
@@ -1038,15 +1033,18 @@ a.cart::before {
   opacity: 1;
 }
 
-
-
-
 /*блок для особенностей*/
-.features-filter legend {
-  margin-bottom: 15px;
+.features-filter {
+  margin-top: 43px;
 } 
+
+.list-features {
+  margin-top: 17px;
+  margin-bottom: 33px;
+}
+
 .list-features li {
-  padding-bottom: 10px;	
+  padding-bottom: 16px;	
 }
 
 .checkbox-control {
@@ -1112,6 +1110,7 @@ a.cart::before {
 .button-show {
   color: #000000;
   background-color: #eeeeee;
+  width:100%;
 }
 
 .button-show:hover {
@@ -1131,13 +1130,18 @@ a.cart::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 53px;
 }
 
 .sort-list {
   display: flex;
   justify-content: space-between;
   width: 360px;
+  margin-top: -3px;
+}
+
+.sort-list li {
+  padding-right: 10px;
 }
 
 .sort b {
@@ -1145,6 +1149,7 @@ a.cart::before {
   line-height: 24px;
   text-transform: uppercase;
   font-weight: 700;
+  margin-top: -8px;
 }
 
 .sort-list a {
@@ -1209,49 +1214,49 @@ a.cart::before {
 
 .templates {
   width: 760px;
+  margin-bottom: -12px;
 }
 
 .templates-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .catalog-item {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
   width: 360px;
   min-height: 620px;
-  z-index: 30;
 }
 
 
 
 .catalog-item::before {
-    content: "";
-    display: inline-block;
-    vertical-align: top;
-    background: url(../img/browser.svg) no-repeat;
-    height: 40px;
-    width: 360px;
-    opacity: 0.3;
-    padding: 0;
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/browser.svg) no-repeat;
+  height: 40px;
+  width: 360px;
+  opacity: 0.3;
+  padding: 0;
 }
 
 .catalog-item:hover:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .catalog-item-details {
   box-sizing: border-box;
   width: 100%;
   background-color: #eeeeee;
-  display:none; 
+  display: none;
   position: absolute;
-  bottom: 0px;
-  z-index: 1;
+  bottom: 8px;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
 }
 
 
@@ -1273,6 +1278,7 @@ a.cart::before {
 .catalog-item-details .button {
   display:inline-block;
   text-align: center;
+  width: 95px;
 }
 
 .catalog-item:hover .catalog-item-details {
@@ -1331,9 +1337,13 @@ a.cart::before {
   border-top-color: #bfbfbf;
 }
 
+.inner-page .contact b {
+  margin-bottom: 23px;	
+}
 
-
-
+.inner-page .addres {
+  padding-bottom: 16px;
+}
 
 
 
@@ -1341,15 +1351,12 @@ a.cart::before {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
