@@ -258,13 +258,11 @@ a.cart::before {
 }
 
 .slider-item h3 {
-  max-width: 600px;
-  margin: 0;
-  margin-bottom: 27px;
-
-  font-size: 55px;
-  line-height: 55px;
-  font-weight: 500;
+    max-width: 600px;
+    margin: -4px 0 27px;
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
 }
 
 .slider-item p {
@@ -344,6 +342,9 @@ a.cart::before {
   background-repeat: no-repeat;
 }
 
+.button-order {
+  padding: 16px 40px;
+}
 
 .order-site-button {
   background-color: #fb565a;
@@ -481,7 +482,7 @@ a.cart::before {
 
 .studio-table-percent > td {
   width: 33.3%;
-  height: 72px;
+  height: 66px;
   vertical-align: top;
   font-size: 45px;
   line-height: 1.4;
@@ -557,7 +558,7 @@ a.cart::before {
 
 .contacts-name {
   display: inline-block;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -858,7 +859,7 @@ a.cart::before {
 }
 
 .title {
-  margin-top: 15px;
+  margin-top: -7px;
   text-align: center;
   font-size: 55px;
   line-height: 66px;
@@ -1347,7 +1348,11 @@ a.cart::before {
   border-top-color: #bfbfbf;
 }
 
-.inner-page .contact b {
+.inner-page .contacts {
+  padding-top: 46px;
+}
+
+.inner-page .contacts-name {
   margin-bottom: 23px;
 }
 
