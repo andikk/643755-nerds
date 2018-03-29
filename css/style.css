@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+a img {
+  border: 0;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
