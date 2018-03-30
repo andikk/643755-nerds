@@ -15,7 +15,7 @@ nav,
 footer, 
 header, 
 section { 
-  display: block 
+  display: block;
 }
 
 img {
