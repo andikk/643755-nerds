@@ -1027,6 +1027,31 @@ a.cart::before {
   opacity: 0.3;
 }
 
+.features-filter {
+  margin-top: 43px;
+}
+
+.list-features {
+  margin-top: 17px;
+  margin-bottom: 33px;
+}
+
+.list-features li {
+  padding-bottom: 16px;
+}
+
+.checkbox-control {
+  position: relative;
+  display: inline-block;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+.checkbox-control:hover,
+.checkbox-control:focus {
+  color: #4d4d4d;
+}
+
 .checkbox-control-indicator + label::before {
   content: "";
   width: 28px;
@@ -1067,66 +1092,6 @@ a.cart::before {
 .radio-control-indicator:checked:disabled + label::before,
 .checkbox-control-indicator:checked:disabled + label::before {
   opacity: 0.1;
-}
-
-
-.features-filter {
-  margin-top: 43px;
-}
-
-.list-features {
-  margin-top: 17px;
-  margin-bottom: 33px;
-}
-
-.list-features li {
-  padding-bottom: 16px;
-}
-
-.checkbox-control {
-  position: relative;
-  display: inline-block;
-  padding-left: 35px;
-  cursor: pointer;
-}
-
-.checkbox-control:hover,
-.checkbox-control:focus {
-  color: #4d4d4d;
-}
-
-.checkbox-control input[type="checkbox"]+.checkbox-control-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  opacity: 0.4;
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-}
-
-.checkbox-control input[type="checkbox"]:checked+.checkbox-control-indicator {
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-}
-
-.checkbox-control input[type="checkbox"]:disabled+.checkbox-control-indicator {
-  opacity: 0.1;
-}
-
-.checkbox-control input[type="checkbox"]:disabled:hover+.checkbox-control-indicator {
-  opacity: 0.1;
-}
-
-.checkbox-control input[type="checkbox"]:hover+.checkbox-control-indicator,
-.checkbox-control input[type="checkbox"]:focus+.checkbox-control-indicator {
-  opacity: 1;
-}
-
-.checkbox-control input[type="checkbox"]:checked:hover+.checkbox-control-indicator,
-.checkbox-control input[type="checkbox"]:checked:focus+.checkbox-control-indicator {
-  opacity: 1;
 }
 
 .button-show {
