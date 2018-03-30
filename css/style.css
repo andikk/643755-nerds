@@ -1001,43 +1001,74 @@ a.cart::before {
   color: #4d4d4d;
 }
 
-.radio-control input[type="radio"]+.radio-control-indicator {
+.radio-control-indicator + label::before {
+  content: "";
+  width: 28px;
+  height: 28px;
   position: absolute;
-  top: 0;
-  left: 0;
   background-image: url("../img/radio-off.svg");
-  width: 25px;
-  height: 25px;
-  opacity: 0.4;
-}
-
-.radio-control input[type="radio"]:checked+.radio-control-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../img/radio-on.svg");
-  width: 25px;
-  height: 25px;
-  opacity: 0.4;
-}
-
-.radio-control input[type="radio"]:disabled+.radio-control-indicator {
-  opacity: 0.1;
-}
-
-.radio-control input[type="radio"]:disabled:hover+.radio-control-indicator {
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 0px;
+  left: 5px;
   opacity: 0.3;
 }
 
-.radio-control input[type="radio"]:hover+.radio-control-indicator,
-.radio-control input[type="radio"]:focus+.radio-control-indicator {
+.radio-control-indicator:checked + label::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 0px;
+  left: 5px;
+  opacity: 0.3;
+}
+
+.checkbox-control-indicator + label::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  top: 0px;
+  left: 5px;
+  opacity: 0.3;
+}
+
+.checkbox-control-indicator:checked + label::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  top: 0px;
+  left: 5px;
+  opacity: 0.3;
+}
+
+.radio-control-indicator:focus + label::before,
+.checkbox-control-indicator:focus + label::before,
+.radio-control-indicator:checked:focus + label::before,
+.checkbox-control-indicator:checked:focus + label::before,
+.radio-control-indicator:not(:disabled) + label:hover::before,
+.checkbox-control-indicator:not(:disabled) + label:hover::before,
+.radio-control-indicator:checked:not(:disabled) + label:hover::before,
+.checkbox-control-indicator:checked:not(:disabled) + label:hover::before {
   opacity: 1;
 }
 
-.radio-control input[type="radio"]:checked:hover+.radio-control-indicator,
-.radio-control input[type="radio"]:checked:focus+.radio-control-indicator {
-  opacity: 1;
+.radio-control-indicator:disabled + label::before,
+.checkbox-control-indicator:disabled + label::before,
+.radio-control-indicator:checked:disabled + label::before,
+.checkbox-control-indicator:checked:disabled + label::before {
+  opacity: 0.1;
 }
+
 
 .features-filter {
   margin-top: 43px;
