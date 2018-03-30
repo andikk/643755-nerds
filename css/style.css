@@ -1273,6 +1273,7 @@ a.cart::before {
   position: absolute;
   bottom: 8px;
   text-align: center;
+  width: 360px;
 }
 
 .catalog-item-details h3 {
