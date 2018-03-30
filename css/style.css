@@ -9,6 +9,15 @@ body {
   background-color: #ffffff;
 }
 
+main,
+aside,
+nav, 
+footer, 
+header, 
+section { 
+  display: block 
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -18,7 +27,7 @@ a {
   text-decoration: none;
 }
 
-a img {
+a > img {
   border: 0;
 }
 
@@ -163,7 +172,7 @@ a.cart::before {
 
 .slider {
   position: relative;
-  margin-bottom: 82px;
+  margin-bottom: 80px;
   min-width: 1200px;
   background-color: #eeeeee;
 }
@@ -212,13 +221,13 @@ a.cart::before {
 
 .slider-item {
   display: none;
-  padding: 78px 0 80px 0;
+  padding: 80px 0 80px 0;
 }
 
 .slider-item:nth-child(1) {
   background-image: url("../img/nerds-index-slide1.png");
   background-repeat: no-repeat;
-  background-position: 100% 0px;
+  background-position: 99.3% -2px;
 }
 
 .slider-item:nth-child(2) {
@@ -276,17 +285,17 @@ a.cart::before {
 }
 
 .button {
+  display: table-cell;
+  padding: 17px 54px;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
-  display: table-cell;
   color: #ffffff;
   background-color: #fb565a;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  padding: 16px 53px;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -317,28 +326,28 @@ a.cart::before {
 .service-site,
 .service-application,
 .service-presentation {
-  padding-top: 150px;
+  padding-top: 145px;
   width: 305px;
   min-height: 178px;
   background-position: left top;
 }
 
 .services h3 {
+  margin-top: 25px;
+  margin-bottom: 0px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
   text-transform: uppercase;
-  margin-top: 19px;
-  margin-bottom: 0px;
 }
 
 .services p {
   margin-right: auto;
+  margin-bottom: 29px;
   max-width: 265px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  margin-bottom: 32px;
 }
 
 .service-site {
@@ -347,7 +356,7 @@ a.cart::before {
 }
 
 .button-order {
-  padding: 16px 40px;
+  padding: 17px 40px;
 }
 
 .order-site-button {
@@ -404,7 +413,7 @@ a.cart::before {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 50px;
-  padding-top: 42px;
+  padding-top: 40px;
   border-top: 2px solid #eeeeee;
 }
 
@@ -416,7 +425,7 @@ a.cart::before {
   font-size: 45px;
   line-height: 47px;
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 32px;
   margin-bottom: 15px;
   display: inline-block;
 }
@@ -485,8 +494,8 @@ a.cart::before {
 }
 
 .studio-table-percent > td {
+  padding-bottom: 10px;
   width: 33.3%;
-  height: 66px;
   vertical-align: top;
   font-size: 45px;
   line-height: 1.4;
@@ -538,9 +547,9 @@ a.cart::before {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
   padding-top: 55px;
-  padding-bottom: 50px;
+  padding-bottom: 55px;
   min-width: 1200px;
   min-height: 310px;
   background-image: url(../img/map.jpg);
@@ -562,7 +571,7 @@ a.cart::before {
 
 .contacts-name {
   display: inline-block;
-  margin-bottom: 22px;
+  margin-bottom: 19px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -570,7 +579,7 @@ a.cart::before {
 }
 
 .contacts-addres {
-  margin-bottom: 16px;
+  margin-bottom: 19px;
   font-size: 16px;
   line-height: 18px;
   font-style: normal;
@@ -578,7 +587,7 @@ a.cart::before {
 
 .contacts-tel {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -850,12 +859,13 @@ a.cart::before {
 }
 
 .inner-page .main-header {
-  min-height: 360px;
   margin-bottom: 55px;
+  padding-bottom: 50px;
+
 }
 
 .inner-page .main-navigation {
-  margin-bottom: 75px;
+  margin-bottom: 15px;
 }
 
 .inner-page .main-footer {
@@ -863,7 +873,7 @@ a.cart::before {
 }
 
 .title {
-  margin-top: -7px;
+ /* margin-top: -7px;*/
   text-align: center;
   font-size: 55px;
   line-height: 66px;
@@ -895,8 +905,8 @@ a.cart::before {
 
 .range-controls {
   position: relative;
-  height: 41px;
-  margin-bottom: 12px;
+  height: 42px;
+  margin-bottom: 15px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
@@ -1144,7 +1154,6 @@ a.cart::before {
   line-height: 24px;
   text-transform: uppercase;
   font-weight: 700;
-  margin-top: -8px;
 }
 
 .sort-list a {
@@ -1178,6 +1187,7 @@ a.cart::before {
 .btn-down a,
 .btn-up a {
   display: inline-block;
+  vertical-align: middle;
   width: 12px;
   height: 12px;
   opacity: 0.3;
@@ -1255,7 +1265,7 @@ a.cart::before {
 .catalog-item-details {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 35px;
+  padding-top: 25px;
   padding-right: 60px;
   padding-left: 60px;
   padding-bottom: 40px;
@@ -1278,7 +1288,7 @@ a.cart::before {
 }
 
 .catalog-item-details .catalog-text {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   max-width: 240px;
   line-height: 18px;
   color: #666666;
@@ -1309,7 +1319,7 @@ a.cart::before {
 }
 
 .pagination-item {
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 .pagination-item a {
@@ -1350,18 +1360,6 @@ a.cart::before {
   background-color: #d5d5d5;
   border-color: #d5d5d5;
   border-top-color: #bfbfbf;
-}
-
-.inner-page .contacts {
-  padding-top: 46px;
-}
-
-.inner-page .contacts-name {
-  margin-bottom: 23px;
-}
-
-.inner-page .addres {
-  padding-bottom: 16px;
 }
 
 .visually-hidden:not(:focus):not(:active),
