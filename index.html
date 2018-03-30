@@ -6,7 +6,7 @@
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -196,15 +196,16 @@
         <p>
           <label for="user-name">Ваше имя:</label>
           <input type="text" name="user-name" id="user-name" placeholder="Имя Фамилия" required>
-        </p>
+		</p>
         <p>
           <label class="lbl-email" for="user-email">Ваш e-mail:</label>
           <input type="email" name="user-email" id="user-email" placeholder="email@example.com" required>
-        </p>
+	    </p>
       </div>
       <p class="user-message">
-        <label for="user-message">Текст письма:</label>
-        <textarea name="user-message" id="user-message" required> В свободной форме</textarea>
+        <label for="user-message">Текст письма:
+          <textarea name="user-message" id="user-message" required>В свободной форме</textarea>
+		</label>
       </p>
       <input type="submit" class="button write-button" name="user-submit" id="user-submit" value="Отправить">
     </form>

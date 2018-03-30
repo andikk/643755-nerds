@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
+ 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс - каталог</title>
@@ -45,12 +45,10 @@
               <div class="toggle toggle-max"></div>
             </div>
             <div class="price-controls">
-              <label class="min-price">от
-                <input name="min-price" type="text" value="0">
-              </label>
-              <label class="max-price">до
-                <input name="max-price" type="text" value="15000">
-              </label>
+              <label class="min-price" for="min-price">от </label>
+              <input name="min-price" id="min-price" type="text" value="0">
+              <label class="max-price" for="max-price">до</label>
+              <input name="max-price" id="max-price" type="text" value="15000">
             </div>
           </div>
         </fieldset>
@@ -58,22 +56,16 @@
           <legend>Сетка:</legend>
           <ul class="list-layout list-unstyled">
             <li>
-              <label class="radio-control">
-                <input type="radio" class="visually-hidden" name="layout" value="adaptive" checked>
-                <span class="radio-control-indicator"></span> Адаптивная
-              </label>
+              <label class="radio-control" for="adaptive"> <span class="radio-control-indicator"></span>Адаптивная</label>
+              <input type="radio" class="visually-hidden" name="layout" id="adaptive" value="adaptive" checked>
             </li>
             <li>
-              <label class="radio-control">
-                <input type="radio" class="visually-hidden" name="layout" value="fixed">
-                <span class="radio-control-indicator"></span> Фиксированная
-              </label>
+              <label class="radio-control" for="fixed"><span class="radio-control-indicator"></span>Фиксированная</label>
+              <input type="radio" class="visually-hidden" name="layout" id="fixed" value="fixed">
             </li>
             <li>
-              <label class="radio-control">
-                <input type="radio" class="visually-hidden" name="layout" value="elastic">
-                <span class="radio-control-indicator"></span> Резиновая
-              </label>
+              <label class="radio-control" for="elastic"><span class="radio-control-indicator"></span>Резиновая</label>
+              <input type="radio" class="visually-hidden" name="layout" id="elastic" value="elastic">
             </li>
           </ul>
         </fieldset>
@@ -81,34 +73,24 @@
           <legend>Особенности:</legend>
           <ul class="list-features list-unstyled">
             <li>
-              <label class="checkbox-control">
-                <input type="checkbox" class="visually-hidden" name="slider" checked>
-                <span class="checkbox-control-indicator"></span> Слайдер
-              </label>
+              <label class="checkbox-control" for="slider"><span class="checkbox-control-indicator"></span>Слайдер</label>
+              <input type="checkbox" class="visually-hidden" name="slider" id="slider" checked>
             </li>
             <li>
-              <label class="checkbox-control">
-                <input type="checkbox" class="visually-hidden" name="features">
-                <span class="checkbox-control-indicator"></span> Блок преимуществ
-              </label>
+              <label class="checkbox-control" for="features"><span class="checkbox-control-indicator"></span>Блок преимуществ</label>
+              <input type="checkbox" class="visually-hidden" name="features" id="features">
             </li>
             <li>
-              <label class="checkbox-control">
-                <input type="checkbox" class="visually-hidden" name="news" checked>
-                <span class="checkbox-control-indicator"></span> Новости
-              </label>
+              <label class="checkbox-control" for="news"><span class="checkbox-control-indicator"></span>Новости</label>
+              <input type="checkbox" class="visually-hidden" name="news" id="news" checked>
             </li>
             <li>
-              <label class="checkbox-control">
-                <input type="checkbox" class="visually-hidden" name="gallery">
-                <span class="checkbox-control-indicator"></span> Галерея
-              </label>
+              <label class="checkbox-control" for="gallery"><span class="checkbox-control-indicator"></span>Галерея</label>
+              <input type="checkbox" class="visually-hidden" name="gallery" id="gallery">
             </li>
             <li>
-              <label class="checkbox-control">
-                <input type="checkbox" class="visually-hidden" name="cart"> Корзина
-                <span class="checkbox-control-indicator"></span>
-              </label>
+              <label class="checkbox-control" for="cart"><span class="checkbox-control-indicator"></span>Корзина</label>
+              <input type="checkbox" class="visually-hidden" name="cart" id="cart"> 
             </li>
           </ul>
         </fieldset>
@@ -201,8 +183,9 @@
         <div class="contacts">
           <b class="contacts-name">Nerds design studio</b>
           <address class="contacts-addres">
-            191186, Санкт-Петербург,
-            <br> ул. Б. Конюшенная, д. 19/8
+		    <p>191186, Санкт-Петербург,<br> 
+			  ул. Б. Конюшенная, д. 19/8
+			</p>
           </address>
           <p class="contacts-tel">тел. +7 (812) 275-75-75</p>
           <a class="button write-button" href="#user-form">Напишите нам</a>
@@ -254,15 +237,16 @@
         <p>
           <label for="user-name">Ваше имя:</label>
           <input type="text" name="user-name" id="user-name" placeholder="Имя Фамилия" required>
-        </p>
+		</p>
         <p>
           <label class="lbl-email" for="user-email">Ваш e-mail:</label>
           <input type="email" name="user-email" id="user-email" placeholder="email@example.com" required>
-        </p>
+	    </p>
       </div>
       <p class="user-message">
-        <label for="user-message">Текст письма:</label>
-        <textarea name="user-message" id="user-message" required>В свободной форме</textarea>
+        <label for="user-message">Текст письма:
+          <textarea name="user-message" id="user-message" required>В свободной форме</textarea>
+		</label>
       </p>
       <input type="submit" class="button write-button" name="user-submit" id="user-submit" value="Отправить">
     </form>
