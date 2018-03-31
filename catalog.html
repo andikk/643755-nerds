@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
- 
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс - каталог</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/style.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="inner-page">
@@ -44,7 +44,7 @@
               <div class="toggle toggle-min"></div>
               <div class="toggle toggle-max"></div>
             </div>
-  		    <div class="price-controls">
+            <div class="price-controls">
               <label class="min-price" for="min-price">от</label>
               <input name="min-price" id="min-price" type="text" value="0">
               <label class="max-price" for="max-price">до</label>
@@ -57,15 +57,15 @@
           <ul class="list-layout list-unstyled">
             <li>
               <input type="radio" class="radio-control-indicator visually-hidden" name="layout" id="adaptive" value="adaptive" checked>
-			  <label class="radio-control" for="adaptive">Адаптивная</label>
+              <label class="radio-control" for="adaptive">Адаптивная</label>
             </li>
             <li>
               <input type="radio" class="radio-control-indicator visually-hidden" name="layout" id="fixed" value="fixed">
-			  <label class="radio-control" for="fixed">Фиксированная</label>
+              <label class="radio-control" for="fixed">Фиксированная</label>
             </li>
             <li>
               <input type="radio" class="radio-control-indicator visually-hidden" name="layout" id="elastic" value="elastic">
-			  <label class="radio-control" for="elastic">Резиновая</label>
+              <label class="radio-control" for="elastic">Резиновая</label>
             </li>
           </ul>
         </fieldset>
@@ -74,23 +74,23 @@
           <ul class="list-features list-unstyled">
             <li>
               <input type="checkbox" class="checkbox-control-indicator visually-hidden" name="slider" id="slider" checked>
-			  <label class="checkbox-control" for="slider">Слайдер</label>
+              <label class="checkbox-control" for="slider">Слайдер</label>
             </li>
             <li>
               <input type="checkbox" class="checkbox-control-indicator visually-hidden" name="features" id="features">
-			  <label class="checkbox-control" for="features">Блок преимуществ</label>
+              <label class="checkbox-control" for="features">Блок преимуществ</label>
             </li>
             <li>
               <input type="checkbox" class="checkbox-control-indicator visually-hidden" name="news" id="news" checked>
-			  <label class="checkbox-control" for="news">Новости</label>
+              <label class="checkbox-control" for="news">Новости</label>
             </li>
             <li>
               <input type="checkbox" class="checkbox-control-indicator visually-hidden" name="gallery" id="gallery">
-			  <label class="checkbox-control" for="gallery">Галерея</label>
+              <label class="checkbox-control" for="gallery">Галерея</label>
             </li>
             <li>
-              <input type="checkbox" class="checkbox-control-indicator visually-hidden" name="cart" id="cart"> 
-			  <label class="checkbox-control" for="cart">Корзина</label>
+              <input type="checkbox" class="checkbox-control-indicator visually-hidden" name="cart" id="cart">
+              <label class="checkbox-control" for="cart">Корзина</label>
             </li>
           </ul>
         </fieldset>
@@ -119,7 +119,8 @@
           <div class="catalog-item-details">
             <a href="#"><h3>Sedona</h3></a>
             <p class="catalog-text">Информационный сайт
-              <br>для туристов</p>
+              <br>для туристов
+            </p>
             <a class="button" href="#">9 900 руб</a>
           </div>
         </li>
@@ -183,9 +184,7 @@
         <div class="contacts">
           <b class="contacts-name">Nerds design studio</b>
           <address class="contacts-addres">
-		    <p>191186, Санкт-Петербург,<br> 
-			  ул. Б. Конюшенная, д. 19/8
-			</p>
+            191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </address>
           <p class="contacts-tel">тел. +7 (812) 275-75-75</p>
           <a class="button write-button" href="#user-form">Напишите нам</a>
@@ -237,16 +236,16 @@
         <p>
           <label for="user-name">Ваше имя:</label>
           <input type="text" name="user-name" id="user-name" placeholder="Имя Фамилия" required>
-		</p>
+        </p>
         <p>
           <label class="lbl-email" for="user-email">Ваш e-mail:</label>
           <input type="email" name="user-email" id="user-email" placeholder="email@example.com" required>
-	    </p>
+        </p>
       </div>
       <p class="user-message">
         <label for="user-message">Текст письма:</label>
         <textarea name="user-message" id="user-message" required>В свободной форме</textarea>
-	  </p>
+      </p>
       <input type="submit" class="button write-button" name="user-submit" id="user-submit" value="Отправить">
     </form>
   </section>
