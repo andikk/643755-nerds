@@ -183,7 +183,7 @@ a.cart::before {
 .slider-controls label {
   position: relative;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
   padding: 8px;
   width: 18px;
   height: 18px;
@@ -357,6 +357,10 @@ a.cart::before {
   background-color: #e74246;
 }
 
+.order-site-button:focus {
+  background-color: #e74246;
+}
+
 .order-site-button:active {
   background-color: #d7373b;
 }
@@ -374,6 +378,10 @@ a.cart::before {
   background-color: #00bc6c;
 }
 
+.order-application-button:focus {
+  background-color: #00bc6c;
+}
+
 .order-application-button:active {
   background-color: #00aa62;
 }
@@ -388,6 +396,10 @@ a.cart::before {
 }
 
 .order-presentation-button:hover {
+  background-color: #eab534;
+}
+
+.order-presentation-button:focus {
   background-color: #eab534;
 }
 
